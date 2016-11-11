@@ -60,7 +60,7 @@ elixir(function (mix) {
     });
 
     elixir(function (mix) {
-        mix.copy('./src/img/icons', 'public/');
+        mix.copy('./src/img/favicons/', 'public/');
     });
 
     elixir(function (mix) {
