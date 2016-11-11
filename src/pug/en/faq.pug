@@ -1,0 +1,42 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename = 'Common Question'
+	- var single_en = true
+	- var lang = 'en'
+
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+
+	section.section--primary
+		.container
+			h1.section--primary--title Common Question
+			hr.fancy
+
+	section.section
+		.container
+			.row
+				.column__mobile-16.column__tablet-5
+					.section--content
+						figure.badge
+							figcaption.ta-center-firm
+								h3 ?
+								p Frequently Asked Questions In this section you can find our clients in relation to ZarinPal. Select questions, see the answer.
+
+				.column__mobile-16.column__tablet-11
+					.section--content
+						ul.list
+							-for(i=0; i<faq.length; i++)
+								li.list--item(class=(i == 0) ? 'on' : 'off')
+									header.list--item-head
+										i.list--item_icon
+										span.list--item-title #{faq[i].question}
+									p #{faq[i].answer}
+
+
+
+	include ../partials/footer
+	<!-- /.ZarinPal -->

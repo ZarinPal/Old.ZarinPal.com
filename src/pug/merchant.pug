@@ -1,0 +1,20 @@
+extends partials/layout
+
+block project-info
+	- var pagename = 'پذیرندگان'
+	- var HelloWithEffect = true
+	- var merchant = true
+	- var index_fa = true
+block content
+
+
+	<!-- .ZarinPal -->
+	include partials/header
+
+	#app
+
+	include partials/footer
+	<!-- /.ZarinPal -->
+	
+block footer
+	script(src="./assets/js/merchants/bundle.js")

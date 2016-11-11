@@ -1,0 +1,130 @@
+extends partials/layout
+
+block project-info
+	- var pagename = 'آسان پرداخت'
+	- var easypay = true
+	- var index_fa = true
+	- var HelloWithEffect = true
+block content
+
+
+	<!-- .ZarinPal -->
+	include partials/header
+	main.easypay
+		section.video
+			.panel
+				style.
+					.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+				.h_iframe-aparat_embed_frame
+					span(style='display: block;padding-top: 57%')
+					iframe(src='https://www.aparat.com/video/video/embed/videohash/kn2HD/vt/frame', allowfullscreen='true', webkitallowfullscreen='true', mozallowfullscreen='true')
+
+				//- #14643606091969928
+					script(type='text/JavaScript', src='https://www.aparat.com/embed/kn2HD?data[rnddiv]=14643606091969928&data[responsive]=yes' async)
+		
+		section.primary-step
+			article.primary-step_content.primary-step_is-o
+				.wrap
+					.row
+						h2.primary-step_content_little.type-scale_delta.ta-center-firm آسان پرداخت زرین‌پال موفق است
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								figcaption
+									h3.text_title ۱۰٫۰۰۰+
+									h4.text_little تعداد لینک ساخته شده آسان پرداخت
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								figcaption
+									h4.text_title ۵٫۰۰۰+
+									h3.text_little تعداد کسب و کار های فعال
+
+			article.primary-step_is-y
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta مفید و مختصر
+								h1.primary-step_content_title.type-scale_delta بیشتر بفروشید.
+								p.primary-step_content_praph 
+									|هرچه روند پرداخت و خرید راحت‌تر، فروش بیشتر. یک رابطه‌ی مستقیم برای زدن به هدف.
+									|همچنین فکر نکنیم کسی آدرس‌ها و لینک‌های طولانی را دوست داشته باشد. Zarinp.al هم اصلاً دوست ندارد طولانی باشد :)
+									br
+									|در ضمن هرکدام از سرویس‌های زرین‌پال رنگ خاص خود را دارند برای تشخیص و تمیز دادن آنها از یکدیگر. قول می‌دهیم رنگ آبی استفاده شده در درگاه آسان‌پرداخت شما را بیشتر عاشق رنگ آبی می‌کند.
+
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/svg/easypay/ts-01.svg", alt="")
+
+			article.primary-step_is-o
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/svg/easypay/ts-02.svg", alt="")
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta خریداران ، فروشندگان
+								h1.primary-step_content_title.type-scale_delta دریافت اطلاعات 
+								p.primary-step_content_praph 
+									|خیلی خوب می‌شود بدانیم چه کسانی از ما خرید می‌کنند و برای چه کسانی محصول ارسال می‌شود. 
+								h6.primary-step_content_little برای خریداران: 
+								p.primary-step_content_praph 
+									|شما اطلاعات خود را وارد می‌کنید و پس از پرداخت یک رسید برای پیگیری پول پرداختی خود دریافت می‌کنید تا اگر مشکلی پیش آمد بتوانید از همین رسید پیگیری کنید.
+
+			article.primary-step_is-y
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta برای فروشندگان : 
+								p.primary-step_content_praph 
+									|شما دیگر نیاز ندارید اطلاعات خریداران محصولتان را در جاهای مختلف نگه دارید! دیگر اطلاعات خریداران را از دست نمی‌دهید! همه اطلاعات مورد نیاز شما یک جا جمع شده‌اند.
+								div 
+									ol.easypay_style(start="1" type="1")
+										li برای هر محصول می‌دانید چه کسی در چه تاریخی و با چه مشخصاتی برای خرید محصولتان اقدام کرده است.
+										li مثل یک فروشگاه کامل برای فروش محصولات خود گزارش رایگان دریافت می‌کنید.
+										li  به سادگی و با یک لینک، درگاه پرداخت صفحه‌ی اجتماعی خود را دارید!
+
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/svg/easypay/ts-03.svg", alt="")
+
+			article.primary-step_is-o
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/svg/easypay/ts-04.svg", alt="")
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta راه‌اندازی 
+								h1.primary-step_content_title.type-scale_delta فقط در سه مرحله
+								div 
+									ol.easypay_style(start="1" type="1")
+										li  در زرین‌پال 
+											a.easypay_color(href="./auth/register") ثبت‌نام کنید.
+										li هویت خود را 
+											a.easypay_color(href="./auth/login") تایید کنید.
+										li سرویس شما آماده است! 
+											a.easypay_color(href="./auth/login") محصول خود را تعریف کنید 
+											| و بفروشید!به همین راحتی :)
+								p.primary-step_content_praph استفاده از آسان پرداخت برای ماه اول رایگان است و شما می‌توانید بدون پرداخت هیچ هزینه‌ای پرداخت آنلاین را به فروشگاه خود در شبکه‌های اجتماعی اضافه کنید. بعد از آن تنها تا حداکثر ۱% از تراکنش‌ها برای شما هزینه دارد. 
+								a.accent-link(href="./pricing.html") اطلاعات بیشتر در تعرفه‌ها.
+
+						hr
+				.row
+					.column__mobile-16
+						.column_inner
+							nav.easypay-badge.ta-center-firm
+								p شما می‌توانید از این سرویس رایگان استفاده کنید تا ببینید چقدر کار شما را ساده می‌کند!
+								a.btn-animated.btn-animated_colorset_green(href="./auth/register") آسان‌پرداخت من را بساز!
+
+						
+						
+
+	include partials/footer
+	<!-- /.ZarinPal -->

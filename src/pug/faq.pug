@@ -1,0 +1,48 @@
+extends partials/layout
+
+block project-info
+	- var pagename = 'سوالات متداول'
+	- var single_fa = true
+
+
+block content
+
+
+	<!-- .ZarinPal -->
+	include partials/header
+
+	section.section--primary
+		.container
+			//- h4.section--primary--little تماسی از جنس زرین‌پال
+			h1.section--primary--title سوالات متداول
+			hr.fancy
+
+	section.section
+		.container
+			.row
+				.column__mobile-16.column__tablet-5
+					.section--content
+						figure.badge
+							figcaption.ta-center-firm
+								h3 ؟
+								p در این بخش می‌توانید پاسخ به سوالات متداول مشتریان ما را در رابطه با زرین‌پال بیابید. سوال را انتخاب، جواب را مشاهده کنید.
+
+				.column__mobile-16.column__tablet-11
+					.section--content
+						ul.list
+							-for(i=0; i<faq.length; i++)
+								li.list--item(class=(i == 0) ? 'on' : 'off')
+									header.list--item-head
+										i.list--item_icon
+										span.list--item-title #{faq[i].question}
+									p #{faq[i].answer}
+
+	include partials/footer
+	
+	<!-- /.ZarinPal -->
+	
+block footer
+	script(type="text/javascript").
+		require(['init'], function(){
+			require(['modules/faq']);
+		});

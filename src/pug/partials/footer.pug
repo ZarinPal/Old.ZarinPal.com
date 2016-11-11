@@ -1,0 +1,197 @@
+-if(index_en == true || single_en == true || mobile_en )
+	footer.global--footer
+		.wrap
+			section.global--footer-section 
+				.row
+					.column__tablet-12
+						h2.hero-title
+							svg.svg--icon_en(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 311 200")
+								path(fill="#555555" fill-rule="evenodd" d="M101.03 61.685h188.75l2.008-13.362v-.37c0-.844-.476-1.69-1.215-2.43-1.056-1.055-2.535-1.794-4.12-2.006-.316-.053-.633-.053-1.003-.053H109.797l8.978-18.642H285.45c1.215 0 2.43.105 3.644.317 5.493.79 10.668 3.43 14.47 7.18 4.173 4.068 6.814 9.507 6.814 15.634 0 .95-.053 1.954-.212 3.01L291.524 176.55c-.898 6.34-3.697 12.254-7.975 16.532-4.28 4.277-9.93 6.918-16.69 6.918H0l6.285-13.256L86.03 18.59H12.676V0h102.72l-6.285 13.256L29.364 181.41H266.86c1.426 0 2.64-.58 3.54-1.48 1.425-1.425 2.428-3.59 2.745-6.072l9.242-62.266H76.947l24.083-49.907zm14.946 90.36h117.982c2.8 0 5.123 2.325 5.123 5.177 0 2.852-2.323 5.176-5.122 5.176H115.976c-2.8 0-5.123-2.324-5.123-5.176 0-2.852 2.324-5.176 5.123-5.176zm97.966-27.99h22.604c2.852 0 5.176 2.325 5.176 5.177 0 2.85-2.324 5.175-5.176 5.175h-22.604c-2.85 0-5.175-2.324-5.175-5.175 0-2.852 2.324-5.176 5.175-5.176zm-80.38 0h59.836c2.852 0 5.176 2.325 5.176 5.177 0 2.85-2.324 5.175-5.176 5.175h-59.836c-2.852 0-5.175-2.324-5.175-5.175 0-2.852 2.323-5.176 5.175-5.176z")
+							| Zarinpal is Iran’s e-Wallet and safe gateway.
+					.column__mobile-16.column__tablet-4
+						nav.ta-right.ta-center
+							a.btn.btn-golden.small_en.tiny.mobile-half(href="/auth/login")  Sign In
+							a.btn.btn-golden.small_en.tiny.mobile-half(href="/auth/register") Sign Up
+							
+
+			section.global--footer-section
+				.row
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title ZarinPal
+								ul.global--footer-section_nav-list_en
+									li
+										a(href="./zarincard.html") ZarinCard
+									li
+										a(href="/lab/") Persian Lab
+									li
+										a(href="/blog/") Persian Blog
+					
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title About Us
+								ul.global--footer-section_nav-list_en
+									li
+										a(href="./contact.html") Contact Us
+									li
+										a(href="./terms.html") Terms of Use
+								
+
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title Support
+								ul.global--footer-section_nav-list_en
+									
+									li
+										a(href="./faq.html") FAQ
+
+					hr.is-tablet
+
+					.column__mobile-16.column__tablet-7
+						.column_inner
+							h3.global--footer-section_nav-title Receive latest news and special events on your email. Simply enter your email.
+							form#newsletter.form(action="https://api.zarinpal.com/rest/v3/newsletter/subscribe.json" method="post")
+								label.label.inline-input
+									button(class="btn btn-purple inline") News Feed
+									input.input_en(name="data[email]" class="input is-border inline" placeholder="Enter your email address" 
+									dir="ltr" type="email" autocomplete="off" required="on")
+									
+							
+							p
+								small *We hate spam as much as you do. We just send you suggestions and special news.
+			section.global--footer-section 
+				.row
+					.column__mobile-16.column__tablet-13
+						p
+							|All rights reserved to 
+							a(href="https://www.zarinpal.com") ZarinPal.
+							| Using any content or image should be under the resource name. 
+					
+					.column__mobile-16.column__tablet-3
+						.global--footer_social.ta-right.ta-center
+							a.global--footer_social-twitter(href="https://twitter.com/zarinpal" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z")
+							
+							a.global--footer_social-instagram(href="https://www.instagram.com/zarinpal/" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M365.3 234.1h-24.7c1.8 7 2.9 14.3 2.9 21.9 0 48.3-39.2 87.5-87.5 87.5 -48.3 0-87.5-39.2-87.5-87.5 0-7.6 1.1-14.9 2.9-21.9h-24.7V354.4c0 6 4.9 10.9 10.9 10.9H354.4c6 0 10.9-4.9 10.9-10.9V234.1H365.3zM365.3 157.6c0-6-4.9-10.9-10.9-10.9h-32.8c-6 0-10.9 4.9-10.9 10.9v32.8c0 6 4.9 10.9 10.9 10.9h32.8c6 0 10.9-4.9 10.9-10.9V157.6zM256 201.3c-30.2 0-54.7 24.5-54.7 54.7 0 30.2 24.5 54.7 54.7 54.7 30.2 0 54.7-24.5 54.7-54.7C310.7 225.8 286.2 201.3 256 201.3M365.3 398.1H146.7c-18.1 0-32.8-14.7-32.8-32.8V146.7c0-18.1 14.7-32.8 32.8-32.8h218.7c18.1 0 32.8 14.7 32.8 32.8v218.7C398.1 383.4 383.5 398.1 365.3 398.1")
+
+							a.global--footer_social-facebook(href="https://www.facebook.com/zarinpal/" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M212.314 198.895H176v56.445h36.314V421h69.76V254.587h48.682l5.145-55.692h-53.827V167.14c0-13.1 2.77-18.376 16.13-18.376H336V91h-48.287c-51.948 0-75.3 21.768-75.3 63.418-.1 36.374-.1 44.477-.1 44.477z")
+
+							a.global--footer_social-linkedin(href="https://www.linkedin.com/company/zarinpal" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z")
+
+
+
+
+
+
+
+-else
+	footer.global--footer
+		.wrap
+			section.global--footer-section 
+				.row
+					.column__tablet-12
+						h2.hero-title
+							svg.svg--icon(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 311 200")
+								path(fill="#555555" fill-rule="evenodd" d="M101.03 61.685h188.75l2.008-13.362v-.37c0-.844-.476-1.69-1.215-2.43-1.056-1.055-2.535-1.794-4.12-2.006-.316-.053-.633-.053-1.003-.053H109.797l8.978-18.642H285.45c1.215 0 2.43.105 3.644.317 5.493.79 10.668 3.43 14.47 7.18 4.173 4.068 6.814 9.507 6.814 15.634 0 .95-.053 1.954-.212 3.01L291.524 176.55c-.898 6.34-3.697 12.254-7.975 16.532-4.28 4.277-9.93 6.918-16.69 6.918H0l6.285-13.256L86.03 18.59H12.676V0h102.72l-6.285 13.256L29.364 181.41H266.86c1.426 0 2.64-.58 3.54-1.48 1.425-1.425 2.428-3.59 2.745-6.072l9.242-62.266H76.947l24.083-49.907zm14.946 90.36h117.982c2.8 0 5.123 2.325 5.123 5.177 0 2.852-2.323 5.176-5.122 5.176H115.976c-2.8 0-5.123-2.324-5.123-5.176 0-2.852 2.324-5.176 5.123-5.176zm97.966-27.99h22.604c2.852 0 5.176 2.325 5.176 5.177 0 2.85-2.324 5.175-5.176 5.175h-22.604c-2.85 0-5.175-2.324-5.175-5.175 0-2.852 2.324-5.176 5.175-5.176zm-80.38 0h59.836c2.852 0 5.176 2.325 5.176 5.177 0 2.85-2.324 5.175-5.176 5.175h-59.836c-2.852 0-5.175-2.324-5.175-5.175 0-2.852 2.323-5.176 5.175-5.176z")
+							| زرین‌پال، کیف‌پول الکترونیک و درگاه پرداخت ایمن کشور
+					.column__mobile-16.column__tablet-4
+						nav.ta-left.ta-center
+							a.btn.btn-golden.small.tiny.mobile-half(href="/auth/register") ثبت‌نام
+							a.btn.btn-golden.small.tiny.mobile-half(href="/auth/login") ورود به زرین‌پال
+
+			section.global--footer-section
+				.row
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title زرین‌پال
+								ul.global--footer-section_nav-list
+									li
+										a(href="/zarincard.html") زرین‌کارت
+									//- li
+										a(href="#") درگاه پرداخت
+									li
+										a(href="/app.html") اپلیکیشن
+									li
+										a(href="/lab/") آزمایشگاه
+					
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title ارتباط بیشتر
+								ul.global--footer-section_nav-list
+									li
+										a(href="/contact.html") تماس با ما
+									li
+										a(href="/terms.html") قوانین و مقررات
+									li
+										a(href="/policy.html") حریم خصوصی
+									//- li
+										a(href="/contact.html") پشتیبانی
+
+					.column__mobile-8.column__tablet-3
+						.column_inner
+							nav.global--footer-section_nav
+								h3.global--footer-section_nav-title بیشتر بشناسید
+								ul.global--footer-section_nav-list
+									li
+										a(href="/team.html") تیم درجه یک
+									li
+										a(href="/about.html") درباره زرین‌پال
+									li
+										a(href="/faq.html") سوالات متداول
+
+					hr.is-tablet
+
+					.column__mobile-16.column__tablet-7
+						.column_inner
+							h3.global--footer-section_nav-title آخرین اخبار و اتفاقات ویژه در ایمیل شما، فقط کافیست ایمیل خود را وارد کنید.
+							form#newsletter.form(method="post")
+								label.label.inline-input
+									input(name="email" class="input is-border inline" placeholder="آدرس ایمیل خود را وارد نمایید" dir="ltr" type="email" autocomplete="off" required="on")
+									button(type="submit" class="btn btn-purple inline") خبرنامه
+							
+							p
+								small * ما هم مثل شما از اسپم متنفریم، فقط پیشنهادها و خبرهای ویژه را برای شما ارسال می‌کنیم
+			section.global--footer-section 
+				.row
+					.column__mobile-16.column__tablet-13
+						p
+							| صاحب امتیاز تمامی تصاویر، مطالب موجود در وب‌سایت، 
+							a(href="http://www.zarinpal.com") زرین‌پال
+							|  است. لذا استفاده از آن باید با ذکر نام منبع صورت گیرد.
+					
+					.column__mobile-16.column__tablet-3
+						.global--footer_social.ta-left.ta-center
+							a.global--footer_social-twitter(href="https://twitter.com/zarinpal" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z")
+							
+							a.global--footer_social-instagram(href="https://www.instagram.com/zarinpal/" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M365.3 234.1h-24.7c1.8 7 2.9 14.3 2.9 21.9 0 48.3-39.2 87.5-87.5 87.5 -48.3 0-87.5-39.2-87.5-87.5 0-7.6 1.1-14.9 2.9-21.9h-24.7V354.4c0 6 4.9 10.9 10.9 10.9H354.4c6 0 10.9-4.9 10.9-10.9V234.1H365.3zM365.3 157.6c0-6-4.9-10.9-10.9-10.9h-32.8c-6 0-10.9 4.9-10.9 10.9v32.8c0 6 4.9 10.9 10.9 10.9h32.8c6 0 10.9-4.9 10.9-10.9V157.6zM256 201.3c-30.2 0-54.7 24.5-54.7 54.7 0 30.2 24.5 54.7 54.7 54.7 30.2 0 54.7-24.5 54.7-54.7C310.7 225.8 286.2 201.3 256 201.3M365.3 398.1H146.7c-18.1 0-32.8-14.7-32.8-32.8V146.7c0-18.1 14.7-32.8 32.8-32.8h218.7c18.1 0 32.8 14.7 32.8 32.8v218.7C398.1 383.4 383.5 398.1 365.3 398.1")
+
+							a.global--footer_social-facebook(href="https://www.facebook.com/zarinpal/" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M212.314 198.895H176v56.445h36.314V421h69.76V254.587h48.682l5.145-55.692h-53.827V167.14c0-13.1 2.77-18.376 16.13-18.376H336V91h-48.287c-51.948 0-75.3 21.768-75.3 63.418-.1 36.374-.1 44.477-.1 44.477z")
+
+							a.global--footer_social-linkedin(href="https://www.linkedin.com/company/zarinpal" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									path(d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z")
+
+							a.global--footer_social-telegram(href="http://telegram.me/zarinpal" target="_blank")
+								svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+									g(fill="none")
+										path(fill="#777" d="M217 370c-9.233 0-7.664-3.477-10.85-12.244L179 268.646 388 145")
+										path(fill="#999" d="M217 369c7.227 0 10.42-3.23 14.455-7.06L270 325.324 221.92 297")
+										path(fill="#4d4d4d" d="M222.444 296.583l114.885 84.875c13.11 7.234 22.57 3.49 25.836-12.17l46.764-220.36c4.788-19.196-7.317-27.902-19.86-22.208L115.475 232.6c-18.744 7.517-18.634 17.974-3.416 22.633l70.467 21.994 163.14-102.92c7.702-4.67 14.77-2.16 8.97 2.99")

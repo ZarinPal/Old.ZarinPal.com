@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /pg/*
+
+Sitemap: https://www.zarinpal.com/sitemap.xml

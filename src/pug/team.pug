@@ -1,0 +1,169 @@
+extends partials/layout
+
+block project-info
+	- var pagename  = 'تیم'
+	- var HelloWithEffect = true
+	- var menuSelf = true
+	- var index_fa = true
+block content
+
+
+	<!-- .ZarinPal -->
+	include partials/header
+
+	nav.team-navbar
+		.container
+			ul.row
+				li.navbar-module
+					a.active(href="#intro_team")
+						span.navbar-module_number ۱.
+						span.navbar-module_title محیط زرین‌پال
+
+				li.navbar-module
+					a(href="#team_a")
+						span.navbar-module_number ۲.
+						span.navbar-module_title تیم درجه یک
+
+				li.navbar-module
+					a(href="#mapping")
+						span.navbar-module_number ۳.
+						span.navbar-module_title تنوع تیمی
+
+				li.navbar-module
+					a(href="#job-opportunity")
+						span.navbar-module_number ۴.
+						span.navbar-module_title فرصت‌های شغلی
+
+	section.team
+		section.photo-gallery.loader.hide-on-small
+			.wrap.team__wrap
+				.row
+					.team-grid--1-of-3
+						img.photoset(src="./assets/img/team/pic-03.jpg", alt="")
+						img.photoset(src="./assets/img/team/pic-04.jpg", alt="")
+
+					.team-grid--1-of-3
+						img.photoset(src="./assets/img/team/pic-01.jpg", alt="")
+					
+					.team-grid--1-of-3
+						img.photoset(src="./assets/img/team/pic-06.jpg", alt="")
+						img.photoset(src="./assets/img/team/pic-05.jpg", alt="")
+	
+		article.team-article
+			section.team-content.section-adaptive#intro_team
+				.container
+					.row
+						.column__mobile-16.ta-center-firm
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta محیط زرین‌پال
+								h1.primary-step_content_title.type-scale_delta هیچ‌جا خونه‌ی خود آدم نمیشه!
+								p.primary-step_content_praph 
+									|روزی که به زرین‌پال بیایید کاملاً متوجه خواهید شد ما اینجا چقدر راحت هستیم،‌ انگار فقط از خانه‌ی خود به اتاق کارمان آمده‌ایم. اینجا کسی سرش در لاک خودش نیست! همه با هم تعامل و همفکری دارند و با کمک به یکدیگر سعی در رشد خود و پیشرفت زرین‌پال دارند. مطمئن باشید در راه برگشت و در تاکسی مثل دیگران کسل و خواب‌آلود نخواهید بود، اینجا همه خوشحال هستیم :)
+								
+									a.accent-link.center(href="#job-opportunity") فرصت‌های شغلی در زرین‌پال
+
+		section.people.section-adaptive#team_a
+			header.people-header.ta-center-firm
+				h1.primary-step_content_title.type-scale_gamma تیم درجه یک
+				h3.primary-step_content_little.type-scale_zeta دور هم جمع شده‌ایم تا تجربه‌ای باحال و کاربردی برای کاربران آنلاین بسازیم.
+
+			section.people-holder
+				-for(i=0; i<team.length; i++)
+					figure._person(data-people-slug=''+team[i].slug+'' data-people-name=''+team[i].name+'' data-people-job=''+team[i].job+'' data-state-position=''+team[i].level+'')
+						img(src="./assets/img/people/"+team[i].slug+".jpg", alt="")
+
+		//- NOTE: Convert value to strong value! with this
+		//- (val + 20) / 2 = x
+		//- x * 5 = A
+		//- A * 1.25
+		article.team-article
+			section.team-content.edu-section.section-adaptive#mapping
+				.container
+					.row
+						.column__mobile-16.column__tablet-6
+							.column_inner
+								ul.chart-inline
+									li.chart-module.business
+										span.chart-module_title کسب و کار
+										.line(style="width: 75%")
+											i.punch(style="animation-delay: 0.5s;")
+											i.punch(style="animation-delay: 1.25s;")
+											i.punch
+
+									li.chart-module.network
+										span.chart-module_title مدیران شبکه
+										.line(style="width: 68.75%")
+											i.punch(style="animation-delay: 1.25s;")
+											i.punch(style="animation-delay: 0.5s;")
+											i.punch
+
+									li.chart-module.engineers
+										span.chart-module_title مهندسین
+										//- span.chart-module_title توسعه‌دهندگان نرم افزار
+										.line(style="width: 93.75%")
+											i.punch(style="animation-delay: 2.1s;")
+											i.punch(style="animation-delay: .56s;")
+											i.punch
+
+									li.chart-module.financial
+										span.chart-module_title حسابداری و مالی
+										.line(style="width: 71.875%")
+											i.punch(style="animation-delay: .56s;")
+											i.punch(style="animation-delay: 2.1s;")
+											i.punch
+
+									li.chart-module.support
+										span.chart-module_title پشتیبانی
+										.line(style="width: 71.875%")
+											i.punch(style="animation-delay: 1.6s;")
+											i.punch(style="animation-delay: 2s;")
+											i.punch
+
+						.column__mobile-16.column__tablet-10
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta تنوع تیمی
+								h1.primary-step_content_title.type-scale_delta از هر تخصص بهترین‌ها را داریم.
+								p.primary-step_content_praph 
+									| ما در کنار تمام سرگرمی‌ها و علایق خود مثل فیلم دیدن، موسیقی گوش دادن، بازی کردن،‌ خوردن قهوه، مطالعه‌ی کتاب، ورزش کردن و خیلی چیزهای دیگر تخصص و فعالیت‌های خودمان هم جز علاقه‌مندی‌هایمان می‌دانیم.
+									br
+									| خوشحالیم که در زرین‌پال گروهی دور هم جمع شده‌ایم با هر سن و توانایی در زمینه‌ی فعالیت خودمان علاقمند، حرفه‌ای و متخصص هستیم.
+									//- | زرین‌پال اولین ارايه دهنده درگاه پرداخت واسط در ایران است، در واقع یک راهکار ساده، جامع و کار‌آمد برای قراردادن امکان پرداخت در بستر اینترنت و موبایل است. با استفاده از زرین‌پال می توانید چندین درگاه پرداخت را به سادگی به وبسایت خود اضافه کنید، سریع‌تر و آسان‌تر امکانات پرداخت را به کسب و کار خود اضافه کنید و با خیالی آسوده درآمد خود را مدیریت کنید.
+			section.team-content.team-content_is-x.section-adaptive#job-opportunity
+				.container
+					.row
+						.column__mobile-16
+							.column_inner
+								h1.primary-step_content_title.type-scale_delta فرصت‌های شغلی
+								
+								ul.jobs
+									li.job-module
+										.job-module_department واحد فنی
+										.job-module_title توسعه‌دهنده نرم‌افزار - آشنا با فریم‌وورک های PHP
+										.job-module_float دفتر تهران - یوسف آباد
+
+									li.job-module
+										.job-module_department واحد فروش / مارکتینگ
+										.job-module_title کارشناس فروش
+										.job-module_float دفتر تهران - یوسف آباد
+										//- p.job-module_praph لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+										p.job-module_praph
+											| مدیر فروش زرین‌پال در زمینه‌ی توسعه،‌برنامه‌ریزی و اجرای استراتژی فروش مسئول است. هدف اصلی جذب پذیرندگان جدید و افزایش روز به روز آنهاست.
+											br
+											| حداقل ۳ سال سابقه‌ی کار موفق در مدیریت فروش و توسعه‌ی کسب و کارها در حالت‌های B2B و B2C همچنین تجربه در زمینه‌های فناوری و فناوری‌های مالی (Fintech) و مدل کسب و کارهای نوین و تسلط به زبان انگلیسی از الزامات مدیر فروش می‌باشد.
+									
+									li.job-module
+										.job-module_department واحد مالی
+										.job-module_title حسابدار
+										.job-module_float دفتر تهران - یوسف آباد
+								
+								nav.job--apply_board.ta-center-firm
+									p اگر فکر می‌کنید می‌توانید در پیشرفت زرین‌پال تاثیرگذار باشید به ما بگویید. ارسال رزومه زمانی نمی‌برد اما می‌تواند زمانی سکوی پرتاب شما باشد :)
+									//- p آیا علاقه‌مند هستید به تیم زرین‌پال اضافه شوید و یکی از حرفه‌ای ها باشید؟
+									a.btn-animated.btn-animated_colorset_green(href="mailto:jobs@zarinpal.com") رزومه خود را ارسال کنید
+	include partials/footer
+
+block footer
+	script(type="text/javascript").
+		require(['init'], function(){
+			require(['modules/team']);
+		});

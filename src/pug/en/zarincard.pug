@@ -1,0 +1,75 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename  = 'ZarinCard'
+	- var HelloWithEffect = true
+	- var zarincard_en = true
+	- var index_en = true
+	- var lang = 'en'
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+
+	section#Hello-ZarinCard
+		nav.global--sticky.global--navigation(data-sticky="true")
+			.global--navigation_const
+				.wrap
+					.row
+						include ../partials/const
+					//- | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptate assumenda eveniet ab aliquam sint saepe beatae quas natus molestiae est molestias nam, sunt quod ut esse obcaecati, tempore recusandae.
+		
+		section.features#features
+			
+			article.primary-step_content.primary-step_is-o#Shetab-ZarinCard
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-10.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Shaparak, Shetab
+								h1.primary-step_content_title.type-scale_delta ZarinCard, a Member of Iran’s Banking Network
+
+								//- p.primary-step_content_praph
+								p ZarinCard is a member of Iran’s official banking network (Shetab and Shaparak) and has all features of an Iranian bank card, such as money withdrawal from all ATMs of Shetab network (daily withdrawal limitation is 200000 Tomans based on Iran’s Central Bank rules), payment with all Shaparak POS terminals, payment with all online gateways and internal money transfer to all cards of Shetab network (daily money transfer limitation is 3000000 Tomans based on Iran’s Central Bank rules).
+									
+
+						.column__mobile-16.column__tablet-6.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/tmp/shetab.jpg", alt="")
+			hr.lighter
+			
+			article.primary-step_content.primary-step_is-o#Fees-ZarinCard
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-6.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/tmp/shetab.jpg", alt="")
+
+						.column__mobile-16.column__tablet-10.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta A Fast Process With Low Fees
+								h1.primary-step_content_title.type-scale_delta A Fast and Low Fee Settlement with ZarinCard
+								p Settlements with ZarinCard for prices less than 400000 Tomans is done once a day and immediately, and for the prices more than 400000 Tomans is done from 1 minute to 12 hours. Also the settlement from ZarinPal to ZarinCard is done with 0.5% fee. For example, if your website’s user purchases a product/service worthing 200000 Tomans, first it is settled to your ZarinPal Wallet, and when you ask for settlement with ZarinCard, the amount of money is settled to your ZarinCard by decreasing 0.5% fee and you can withdraw the money from ATMs or other ways. There is the Golden Tuesday Project for ZarinCard holders which reduces the transaction fees up to 0%.
+
+			hr.lighter
+			
+			article.primary-step_content.primary-step_is-o#Features-ZarinCard
+				.wrap
+					.row
+
+						.column__mobile-16.column__tablet-10.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Features and Efficiency
+								h1.primary-step_content_title.type-scale_delta Easy Management of Zarincard from Website’s User Panel
+								p For a better and easier management of Zarincard, we have provided features such as checking card’s balance and bill and online money transfer to all cards of Shetab network for all users on ZarinPal. Users can manage their Zarincards 24/7 by controlling their user’s panel from Zarincard menu on ZarinPal website.
+						
+						.column__mobile-16.column__tablet-6.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="/assets/img/tmp/shetab.jpg", alt="")
+			
+	
+	include ../partials/footer

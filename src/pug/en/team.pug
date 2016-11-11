@@ -1,0 +1,166 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename  = 'Team'
+	- var HelloWithEffect = true
+	- var menuSelf_en = true
+	- var single_en = true
+	- var lang = 'en'
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+
+	nav.team-navbar
+		.container
+			ul.row
+				li.navbar-module
+					a(href="#job-opportunity")
+						span.navbar-module_number 4.
+						span.navbar-module_title Job Opportunities
+
+				li.navbar-module
+					a(href="#mapping")
+						span.navbar-module_number 3.
+						span.navbar-module_title Team Diversity
+
+				li.navbar-module
+					a(href="#team_a")
+						span.navbar-module_number 2.
+						span.navbar-module_title The Top Notch Team
+
+				li.navbar-module
+					a.active(href="#intro_team")
+						span.navbar-module_number 1.
+						span.navbar-module_title ZarinPal Environment
+	section.team
+		section.photo-gallery.loader.hide-on-small
+			.wrap.team__wrap
+				.row
+					.team-grid--1-of-3
+						img.photoset(src="../assets/img/team/pic-03.jpg", alt="")
+						img.photoset(src="../assets/img/team/pic-04.jpg", alt="")
+
+					.team-grid--1-of-3
+						img.photoset(src="../assets/img/team/pic-01.jpg", alt="")
+					
+					.team-grid--1-of-3
+						img.photoset(src="../assets/img/team/pic-06.jpg", alt="")
+						img.photoset(src="../assets/img/team/pic-05.jpg", alt="")
+	
+		article.team-article
+			section.team-content.section-adaptive#intro_team
+				.container
+					.row
+						.column__mobile-16.ta-center-firm
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta ZarinPal Environment
+								h1.primary-step_content_title.type-scale_delta There is no place like home.
+								p.primary-step_content_praph 
+									|The day you come to ZarinPal’s office, you understand how relaxed we are here. It seems we have gone from our homes to our workrooms. No one is isolated here! We all like team work and intellectual engagement and we help each other to grow ourselves and ZarinPal. Be sure you won’t be tired or sleepy on the way back home or in taxi. We all are happy here :)
+								
+									a.accent-link.center(href="#job-opportunity") Job Opportunities in ZarinPal
+
+		section.people.section-adaptive#team_a
+			header.people-header.ta-center-firm
+				h1.primary-step_content_title.type-scale_gamma The Top Notch Team
+				h3.primary-step_content_little.type-scale_zeta We are gathering here to create a cool and practical experience for online users.
+
+			section.people-holder
+				-for(i=0; i<team.length; i++)
+					figure._person(data-people-slug=''+team[i].slug+'' data-people-name=''+team[i].name+'' data-people-job=''+team[i].job+'' data-state-position=''+team[i].level+'')
+						img(src="../assets/img/people/"+team[i].slug+".jpg", alt="")
+
+		//- NOTE: Convert value to strong value! with this
+		//- (val + 20) / 2 = x
+		//- x * 5 = A
+		//- A * 1.25
+		article.team-article
+			section.team-content.edu-section.section-adaptive#mapping
+				.container
+					.row
+						.column__mobile-16.column__tablet-6
+							.column_inner
+								ul.chart-inline
+									li.chart-module.business
+										span.chart-module_title Business
+										.line(style="width: 75%")
+											i.punch(style="animation-delay: 0.5s;")
+											i.punch(style="animation-delay: 1.25s;")
+											i.punch
+
+									li.chart-module.network
+										span.chart-module_title Network Administrators
+										.line(style="width: 68.75%")
+											i.punch(style="animation-delay: 1.25s;")
+											i.punch(style="animation-delay: 0.5s;")
+											i.punch
+
+									li.chart-module.engineers
+										span.chart-module_title Engineers
+										//- span.chart-module_title توسعه‌دهندگان نرم افزار
+										.line(style="width: 93.75%")
+											i.punch(style="animation-delay: 2.1s;")
+											i.punch(style="animation-delay: .56s;")
+											i.punch
+
+									li.chart-module.financial
+										span.chart-module_title Accounting and Finance
+										.line(style="width: 71.875%")
+											i.punch(style="animation-delay: .56s;")
+											i.punch(style="animation-delay: 2.1s;")
+											i.punch
+
+									li.chart-module.support
+										span.chart-module_title Support
+										.line(style="width: 71.875%")
+											i.punch(style="animation-delay: 1.6s;")
+											i.punch(style="animation-delay: 2s;")
+											i.punch
+
+						.column__mobile-16.column__tablet-10
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Team Diversity
+								h1.primary-step_content_title.type-scale_delta We have the best from each expertise.
+								p.primary-step_content_praph 
+									|Beside all of our hobbies and interests like watching movies, listening to music, playing games, drinking coffee, reading books, doing exercises, etc, we know our profession and job as our interest too.
+									br
+									|We are happy to be a group gathered in ZarinPal with different ages, abilities and fields of activity but experts and extremely satisfied of what we are doing. 
+			section.team-content.team-content_is-x.section-adaptive#job-opportunity
+				.container
+					.row
+						.column__mobile-16
+							.column_inner
+								h1.primary-step_content_title.type-scale_delta Job Opportunities
+								
+								ul.jobs
+									li.job-module
+										.job-module_department Technical Department
+										.job-module_title Web Developer - Familiar with PHP frameworks.
+										.job-module_float__en Tehran office - Yousef Abad
+
+									li.job-module
+										.job-module_department Sales Department/Marketing
+										.job-module_title Sales Expert
+										.job-module_float__en Tehran office – Yousef Abad
+										p.job-module_praph
+											|ZarinPal’s sales manager is in charge of developing, planning and implementing sales strategy. The main goal is accepting new merchants and increasing them day by day.
+											br
+											|Minimum 3 years of successful work experience in sales management and business development in B2B and B2C models, experience in technology, financial technologies (Fintech) and new business models and proficiency in English, are the requirements of the sales manager.
+									
+									li.job-module
+										.job-module_department Financial Department
+										.job-module_title Accountant
+										.job-module_float__en Tehran office – Yousef Abad
+								
+								nav.job--apply_board.ta-center-firm
+									p If you think you can make an impact on ZarinPal’s progress, please let us know. Sending us your CV does not take so much time, but could be your launch pad one day :)
+									a.btn-animated.btn-animated_colorset_green(href="mailto:jobs@zarinpal.com") Send Us Your CV
+	include ../partials/footer
+
+block footer
+	script(type="text/javascript").
+		require(['init'], function(){
+			require(['modules/team']);
+		});

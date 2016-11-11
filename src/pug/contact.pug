@@ -1,0 +1,80 @@
+extends partials/layout
+
+block project-info
+	- var pagename = 'تماس با ما'
+	- var single_fa = true
+
+block content
+
+
+	<!-- .ZarinPal -->
+	include partials/header
+
+	section.section--primary
+		.container
+			//- h4.section--primary--little تماسی از جنس زرین‌پال
+			h1.section--primary--title تماس با ما
+			hr.fancy
+
+	section.section
+		.container
+			.row
+				.column__mobile-16.column__tablet-9
+					.section--content
+						.map-location#map(data-latlang="35.7281855,51.4052498")
+						p
+							| – تلفن:
+							//- a(href="tel:*780#") Siama
+							a(href="tel:+982188636000")
+								| ۸۸۶۳۶۰۰۰ ۰۲۱
+							br
+							| – نشانی: تهران - یوسف آباد - کوچه بیستم - پلاک ۶۱ - واحد ۲
+							br
+							| – کد پستی: ۱۴۳۱۹۵۶۳۷۱
+							br
+							| – ساعات کاری: شنبه تا چهارشنبه - از ساعت ۹ صبح الی ۵ بعد از ظهر.
+							br
+							| پيگيری تيکت: برای مشاهده و پاسخ دادن به تيکت های قبلی <a href="/guestTicket/search/">اينجا کليک کنيد</a>.
+
+				.column__mobile-16.column__tablet-7
+					form(action='/guestTicket/create', method="post")
+						form.form.form--border
+							label.label
+								span.place نام و نام‌خانوادگی
+								input.input.is-border(type="text" name="name" placeholder="نام و نام‌خانوادگی" required="true")
+
+							label.label
+								span.place شماره موبایل
+								input.input.is-border(type="text" maxlength="11" name="phone" placeholder="09120000000" required="true")
+
+							label.label
+								span.place آدرس پست الکترونيکی
+								input.input.is-border(type="email" name="email" placeholder="آدرس پست الکترونيکی" required="true")
+							
+							//- label.label
+								span.place دپارتمان
+								select.input.is-border(name="")
+									option(value="1") #1
+									option(value="2") #2
+									
+							label.label
+								span.place عنوان پیام
+								input.input.is-border(type="text" name="title" placeholder="عنوان پیام" required="true")
+
+							label.label
+								span.place متن پیام
+								textarea.input.is-border.textarea(type="text" name="content" placeholder="متن پیام" required="true" row="30")
+							div(class="g-recaptcha" data-sitekey="6Lcrtc4SAAAAAKekvip0yI9Dp2DKXyVtliBXnqHS")
+							label.label
+								button.btn.btn-blue ثبت
+block footer
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+	script(src='https://www.google.com/recaptcha/api.js?hl=fa-IR')
+	script(type="text/javascript").
+		require(['init'], function(){
+			require(['modules/contact']);
+		});
+
+
+	include partials/footer
+	<!-- /.ZarinPal -->

@@ -1,0 +1,300 @@
+@import 'gradients';
+
+
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin center-Y {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+@mixin blur($px: 0) {
+    -webkit-filter: blur(#{$px}px) !important;
+    -ms-filter: blur(#{$px}px) !important;
+    -moz-filter: blur(#{$px}px) !important;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+}
+
+@mixin footer-place( $RootElement, $Element, $height ){
+	#{$RootElement} {
+		min-height: 100%;
+		margin-bottom: -$height;
+		&:after {
+			content: "";
+			display: block;
+		}
+	}
+	#{$Element}, #{$RootElement}:after {
+		height: $height;
+	}
+}
+
+@mixin if-resolution($prefix, $dppx) {
+    // 1px = 96dpi
+    $dpi: $dppx * 96;
+    @media
+        (-webkit-#{$prefix}-device-pixel-ratio: #{$dppx}),
+        (   #{$prefix}--moz-device-pixel-ratio: #{$dppx}),
+        (     -o-#{$prefix}-device-pixel-ratio: #{$dppx*2}/2),
+        (        #{$prefix}-device-pixel-ratio: #{$dppx}),
+        (                #{$prefix}-resolution: #{$dpi}dpi),
+        (                #{$prefix}-resolution: #{$dppx}dppx) {
+            @content;
+    }
+}
+
+
+
+@mixin grayscale( $toggle: "on", $percentage: 1 ) {
+	$svg-type: "matrix";
+	$svg-value: "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0";
+	$ie-alpha: alpha(#{"opacity="}round( $percentage * 100 ) );
+
+	@if $percentage != 1 {
+		$svg-type: "saturate";
+		$svg-value: $percentage;
+	}
+
+	@if $toggle == "on" {
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'#{$svg-type}\' values=\'#{$svg-value}\'/></filter></svg>#grayscale"); // Firefox 10+, Firefox on Android
+		filter: gray $ie-alpha; // IE6-9
+		-webkit-filter: grayscale( round( $percentage * 100% ) ); // Chrome 19+, Safari 6+, Safari 6+ iOS
+		filter: grayscale( round( $percentage * 100% ) ); // Catch-all
+		backface-visibility: hidden;
+	}
+
+	@if $toggle == "off" {
+	@if $svg-type == "saturate" {
+		filter: none;
+	} @else {
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+	}
+		-webkit-filter: grayscale(0%);
+		filter: grayscale(0);
+	}
+}
+
+
+@mixin aspect-ratio($arglist... /*$width/$ratio, $height*/){
+	$map : keywords($arglist);
+	$height: map-get($map, height) or nth-or-null($arglist, 2);
+	$width:  map-get($map, width)  or nth-or-null($arglist, 1);
+	$ratio:  map-get($map, ratio)  or if($width and $height, $width/$height, nth-or-null($arglist, 1)) or 1;
+	$padding: 1/$ratio * 100%;
+	&:before { content: ''; float: right; padding-bottom: $padding;  }
+}
+
+
+
+// Material Shadows:
+@mixin card($depth) {
+	@if $depth < 1 {
+		box-shadow: none;
+	} @else if $depth > 5 {
+		@warn "Invalid $depth `#{$depth}` for mixin `card`.";
+	} @else {
+		box-shadow: bottom-shadow($depth), top-shadow($depth);
+	}
+}
+
+
+
+// Fonts:
+@mixin font-smoothing($value: on) {
+	@if $value == on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+
+
+@mixin placeholder {
+	&:placeholder { @content }
+	&:-moz-placeholder { @content }
+	&::-webkit-input-placeholder { @content }
+}
+
+
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+
+
+@mixin font-face($name, $path, $weight: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+
+@mixin type-scale($scale, $base, $value, $measure:"") {
+	@if $value == rem {
+		font-size: $scale#{px};
+		font-size: context-calc($scale, $base, $value);
+	} @else if $value == em {
+		font-size: context-calc($scale, $base, $value);
+	} @else {
+		font-size: $scale#{px};
+	}
+
+	@if $measure != "" {
+ 		@if $value == rem {
+			margin-bottom: measure-margin($scale, $measure, $value: px);
+			margin-bottom: measure-margin($scale, $measure, $value);
+		} @else if $value == em {
+			margin-bottom: measure-margin($scale, $measure, $value: em);
+		} @else {
+			margin-bottom: measure-margin($scale, $measure, $value);
+		}
+	}
+}
+
+@mixin heading-scale() {
+	@each $name, $size in $typo-scale {
+		.#{$name} {
+			@extend %typoHeading;
+			@include type-scale(
+				$size, $typo-font-base, '#{$typo-typescale-unit}', $typo-measure
+			);
+		}
+	}
+}
+
+@mixin headings() {
+	@each $h, $size in $typo-headings {
+		#{$h} {
+			@extend .#{$size};
+		}
+	}
+}
+
+
+
+@mixin grid-base( $namespace ) {
+	.column__#{$namespace} {
+		@extend %col-flex;
+	}
+	// .column-inline__#{$namespace} {
+	// 	float: none;
+	// 	display: inline-block;
+	// }
+	// @for $i from 1 through $columns {
+	// 	.column-#{$namespace}-#{$i} {
+	// 		// @extend %col;
+	// 	}
+	// }
+
+	// instead of extend for namespace and col
+	[class^="column__#{$namespace}"]{
+		@extend %col;
+	}
+}
+
+
+
+@mixin grid-sizes( $namespace ) {
+
+	@for $i from 1 through $columns {
+		.column__#{$namespace}-#{$i} {
+			width: get-col-percent($i);
+		}
+	}
+}
+
+
+
+
+@mixin animate( $duration, $type: 'fadeIn' ){
+	& {
+	    opacity: 0;
+	    animation: unquote($type) cubic-bezier(0.6, 0.10, 0.925, 0.925) 1;
+		animation-delay: delay($duration);
+		animation-duration: 750ms;
+	    animation-fill-mode: forwards;
+	}
+}
+
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin delay($time){
+	transition-delay: $time;
+	-webkit-transition-delay: $time;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-sizing($box-model) {
+	box-sizing: $box-model;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content }
+	&:-moz-placeholder { @content }
+	&::-moz-placeholder { @content }
+	&:-ms-input-placeholder { @content }
+}
+
+@mixin media($width) {
+    @media screen and (max-width: #{$width}){
+    	@content;
+    }
+}
+
+@mixin no-touch{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

@@ -1,0 +1,103 @@
+.global--footer {
+    background-color: $white-dark;
+    padding: $base-min-space / 3 0 $base-min-space / 3;
+    // border-top: 1px solid $black-opacify;
+    &-section {
+    	&_nav{
+    		&-title{
+				font-size: 1em;
+				color: $dark-purple;
+				font-weight: 300;
+				// &:before{
+				// 	content: '– ';
+				// }
+    		}
+    		&-list{
+    			margin: 0;
+    			list-style: none;
+    			font-size: .95em;
+    			li{
+    				// line-height: 1;
+					display: block;
+    				margin-bottom: .2em;
+    				&:before{
+    					content: '';
+    					display: inline-block;
+    					vertical-align: middle;
+    					width: 4px;
+    					height: 4px;
+    					border-radius: $base-radius;
+    					margin-left: 9px;
+    					background-color: palette(dark, gray);
+    				}
+    				a{
+    					color: palette(dark, gray);
+    					font-size: .95em;
+    					&:hover{
+    						color: palette(blue, dark);
+    					}
+    				}
+    			}
+    		}
+    	}
+        .hero-title {
+            font-size: 1em;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        p:first-of-type {
+            margin-bottom: 0;
+        }
+        p{
+        	a{
+        		color: palette(blue, dark);
+                font-weight: 300;
+        		&:hover{
+        			color: palette(dark, accent);
+        		}
+        	}
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+        	padding: $gutter-width / 1.25 $gutter-width;
+			padding-left: 0;
+            border: 1px solid palette(dark, light);
+            border-width: 0 0 1px;
+        }
+        &:nth-child(2){
+            padding: $base-min-space / 2 0;
+        }
+        &:nth-child(3) {
+            border-width: 1px 0 0;
+            padding-top: $base-min-space / 1.5;
+            padding-bottom: $base-min-space / 2;
+            font-size: .9rem;
+        }
+    }
+    &_social{
+        direction: ltr;
+        @each $name, $value in $social_colors {
+            &-#{$name}:hover{
+                fill: $value;
+            }
+        }
+		&-telegram:hover{
+			opacity: .8;
+		}
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            fill: palette(dark, accent);
+            svg{
+                display: block;
+                width: 1.6875rem;
+            }
+        }
+    }
+    hr.is-tablet{ display: none; }
+    @media screen and (max-width: #{$tablet}) {
+        hr.is-tablet{
+            display: block;
+        }
+    }
+}

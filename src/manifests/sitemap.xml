@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.zarinpal.com/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/auth/register</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/app.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.68</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/pricing.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/blog/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.88</priority>
+</url>
+<url>
+  <loc>/lab/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/zarincard.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/faq.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/about.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/contact.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.55</priority>
+</url>
+<url>
+  <loc>https://www.zarinpal.com/team.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.45</priority>
+</url>
+</urlset>

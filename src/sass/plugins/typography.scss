@@ -1,0 +1,37 @@
+%if-letter-spacing-on{
+    // letter-spacing: -.01em;
+    word-spacing: 1/-24 * 1em;
+}
+
+%font-is-IranSans{
+	font-family: $font-light;
+	font-weight: 200;
+	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
+	// letter-spacing: -.0175em;
+    // word-spacing: -.025em;
+	-moz-osx-font-smoothing: grayscale;
+}
+%letter-spacing{
+	// letter-spacing: -.0365em;
+    letter-spacing: 1/-32 * 1em;
+}
+
+
+%typoHeading {
+	line-height: 1.5; // this fixes huge spaces when a heading wraps onto two lines
+	font-weight: 300;
+	margin-top: 1/12 * 1em;
+	@extend %if-letter-spacing-on;
+}
+
+
+.rm-margin{
+	margin-bottom: 0 !important;
+}
+.ta-right{ text-align: right; }
+.ta-center-firm{ text-align: center; }
+.ta-left{ text-align: left; }
+
+
+@include heading-scale;
+@include headings;

@@ -1,0 +1,96 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename = 'Pricing'
+	- var single_en = true
+	- var lang = 'en'
+
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+	section.section--primary
+		.container
+			h1.section--primary--title Tariff of Fees
+			h4.section--primary--little Less Fees, More Users
+			hr.fancy
+	
+	section.section.pricing
+		.container
+			.row
+				p We believe in win-win game in ZarinPal, therefore, the first month’s fees are free for new users. You can test our services’ stability confidently and learn more about our great features. But when it comes to fees, we do our best in ZarinPal to provide the most diverse services with the best quality to more users with less charge.
+				
+				table.rwd-table.hero
+					thead
+						tr
+							th(width="50%") Settlement Type
+							th(width="25%") ZarinCard
+							th(width="25%") Bank Account
+							
+					tbody
+						tr
+							td(data-th="Settlement Type")
+								| First Month 
+								span(data-balloon="New users can use the many services of ZarinPal for free to asses our services in the first month." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+							td(data-th="Zarin Card") free
+							td(data-th="Bank Account") free
+						tr
+							td(data-th="Settlement Type")
+								| e-Wallet Payment
+								span(data-balloon="ZarinPal E-Wallet is an easy solution to your micro and macro payments by which you can buy from our merchants’ websites." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+							td(data-th="Zarin Card") free
+							td(data-th="Bank Account") free
+						tr
+							td(data-th="Settlement Type") 
+								|ZarinPal Gateway
+								span(data-balloon="ZarinPal Gateway -? All the payment gateways of us in all plugins include these fees." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+							td(data-th="Zarin Card")  0.5%
+							td(data-th="Bank Account") 1.0%
+						tr
+							td(data-th="Settlement Type") 
+								|ZarinGate
+								span(data-balloon="ZarinGate is ZarinPal’s direct gateway which is redirected to a bank’s gateway withoutdisplaying an interface page of ZarinPal." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+							td(data-th="Zarin Card")  0.5%
+							td(data-th="Bank Account") 1.0%
+						tr
+							td(data-th="Settlement Type") 
+								| EasyPay
+								span(data-balloon="EasyPay service is a solution to sales on social media pages, it gives you the ability to have a payment gateway on social pages." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+
+							td(data-th="Zarin Card")  0.5%
+							td(data-th="Bank Account") 1.0%
+						tr
+							td(data-th="Settlement Type")
+								| Golden Tusdays
+								span(data-balloon="Settlement only for ZarinCard is done untill next Tusday." data-balloon-pos="left")
+									svg.question(viewBox="0 0 48 48")
+										path(d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm-.052-25.3c1.1 1.19 1.652 2.9 1.652 5.134v2.09h-2.54v-2.09c0-1.655-.654-3.05-1.964-4.183l-.887-.713c-.42-.34-.84-.685-1.262-1.037-.423-.35-.85-.69-1.278-1.02l.052.034C16.574 19.724 16 18.224 16 16.41c0-1.77.788-3.293 2.365-4.574v.017c.765-.612 1.57-1.074 2.418-1.385.846-.312 1.745-.468 2.695-.468 1.09 0 2.08.184 2.965.553.887.368 1.65.88 2.287 1.538.557.647 1 1.42 1.33 2.322.33.9.52 1.86.566 2.88h-2.54c-.103-3.195-1.64-4.793-4.608-4.793-.52 0-1.06.098-1.617.297-.556.198-1.054.45-1.495.756-.464.397-.837.84-1.122 1.326-.284.487-.426.99-.426 1.512 0 .816.154 1.544.46 2.185.31.64.793 1.215 1.453 1.725.545.42 1.087.833 1.627 1.24.54.41 1.086.812 1.643 1.208l-.052-.05zm3.01 12.665l-2.593 2.533-2.452-2.397 2.574-2.55 2.47 2.415z")
+
+							td(data-th="Zarin Card")  0%
+							td(data-th="Bank Account") -
+						
+
+				p We believe in the quality of our services and the positive effect of using our services on improving your business in the first month of use. Obviously we desire the best for the success of ZarinPal family (you and us). Meanwhile, if you faced any issues in implementing any of our services, please study the documents on ZarinPal laboratory or contact our support team.
+				p
+					span.star-blue *
+					|The above table is not applied to current ZarinPal merchants who has adaptive fees or ZarinCard and the fees table for the previous merchants who had 1.9% and 2.5% fees, is reduced to the new fees.
+				p 
+					span.star-golden **
+					|We have special plans for big businesses. If you are willing to use innovative features and special plans of ZarinPal, please [contact us] to learn more.
+
+				section.pricing--call-to-action
+					span Get your user account and free gateway! 
+					a.btn.btn-green.large(href="/auth/register" target="_blank") Sign Up
+	include ../partials/footer
+	<!-- /.ZarinPal -->

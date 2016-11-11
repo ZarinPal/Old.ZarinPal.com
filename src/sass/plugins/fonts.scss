@@ -1,0 +1,5 @@
+@include font-face($font-IranSans, "../fonts/#{$font-IranSans}/#{$font-IranSans}_ultralight", 200, woff);
+@include font-face($font-IranSans, "../fonts/#{$font-IranSans}/#{$font-IranSans}_light", 300, woff);
+
+// @include font-face($font-IranSans, "../fonts/#{$font-IranSans}/#{$font-IranSans}_ultralight", 200, woff2);
+// @include font-face($font-IranSans, "../fonts/#{$font-IranSans}/#{$font-IranSans}_light", 300, woff2);

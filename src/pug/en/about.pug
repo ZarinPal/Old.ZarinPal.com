@@ -1,0 +1,51 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename = 'About'
+	- var single_en = true
+	- var lang = 'en'
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+
+	section.section--primary
+		.container
+			h1.section--primary--title About Us
+			h4.section--primary--little 
+				|ZarinPal is the best and biggest online gateway in Iran which provides more than 20000 businesses with payment gateway every day.
+			hr.fancy
+
+	article.section.about
+		.container
+			section.section--content
+				.row
+					.column__mobile-16.column__tablet-2
+						//- img(src="https://unsplash.it/200/180?random")
+					.column__mobile-16.column__tablet-16
+						h3.title-section History
+						p 
+							img.img_align-right(src="../assets/img/about/image--2.jpg", width="400")
+							|While online payment was very young in Iran and accepting online payment gateways was very difficult,an Iranian startup called ZarinPal was born in April 2010 to create a safe and trusting environment for online sellers and buyers and providing an online payment gateway as simple as possible.
+							|ZarinPal was welcomed from Sellers and buyers and this creative startup grew up very fast to become a pioneer and reliable business today in the field of giving solutions and providing online payment services. ZarinPal is now an independent group and under the Multi Ventures, a multinational investment fund.
+						hr 
+			
+			section.section--content
+				.row 
+					.column__mobile-16.column__tablet-16
+						img.img_align-center(src="../assets/img/about/image--4.jpg", width="1024")
+						h3.title-section Achievements
+						p Knowledge based businesses have always tried to extend their human resources and knowledge bases. ZarinPal also as a knowledge based business, by investing and double focusing on the existing fields and extending its own activities in IT field especially in financial technology (Fintech), has been able to have valid and significant achievements.
+						
+						ul
+							li Feb 2015: The most powerful technical team between Iranian startups. (from an official report by a Sarava technical consultant.)
+							li March 2015: The favorite service in Iranian Web and Mobile Festival.
+							li March 2016: Elected as best financial and banking Service in Iranian Web and Mobile Festival.
+						hr
+
+						img.img_align-left(src="../assets/img/about/image--3.jpg", width="425")
+						h3.title-section Why ZarinPal?
+						p If we want to express ZarinPal’s point of view in one sentence, it would be simplifying online payment process. Our effort in ZarinPal has always been to provide the most pioneering services in the context of web, mobile, debit card, POS and mPOS. Our goal is to simplify payment steps and increase successful payments to its maximum number at the time the payment decision is made, the fact that has been paid less attention to in Iran. This is true that paying fees is not common in Iran, but accepting the fact that providing services to users has costs, has convinced our users to have a logical payment. Of course, we also do our best to provide the best services along with reasonable fee rate to our users.
+	include ../partials/footer
+	<!-- /.ZarinPal -->

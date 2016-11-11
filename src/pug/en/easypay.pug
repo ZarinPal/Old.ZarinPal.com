@@ -1,0 +1,129 @@
+extends ../partials/layout
+
+block project-info
+	- var pagename = 'EasyPay'
+	- var single_en = true
+	- var easypay_en = true
+	- var HelloWithEffect = true
+	- var lang = 'en'
+	
+block content
+
+
+	<!-- .ZarinPal -->
+	include ../partials/header
+	main.easypay
+		section.video
+			.panel
+				style.
+					.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+				.h_iframe-aparat_embed_frame
+					span(style='display: block;padding-top: 57%')
+					iframe(src='https://www.aparat.com/video/video/embed/videohash/kn2HD/vt/frame', allowfullscreen='true', webkitallowfullscreen='true', mozallowfullscreen='true')
+
+				//- #14643606091969928
+					script(type='text/JavaScript', src='https://www.aparat.com/embed/kn2HD?data[rnddiv]=14643606091969928&data[responsive]=yes' async)
+		
+		section.primary-step
+			article.primary-step_content.primary-step_is-o
+				.wrap
+					.row
+						h2.primary-step_content_little.type-scale_delta.ta-center-firm ZarinPal EasyPay Is Successful
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								figcaption
+									h3.text_title +10000
+									h4.text_little Number of EasyPay Created Links
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								figcaption
+									h4.text_title +5000 
+									h3.text_little Number of Active Businesses
+
+			article.primary-step_is-y
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Concise and Useful
+								h1.primary-step_content_title.type-scale_delta Sell More.
+								p.primary-step_content_praph 
+									|The easier the payment and purchase process, the more sale you can make. A direct relationship to the target. We don’t think any one likes long URLs.
+									|Zarinp.al doesn’t like to be long too : )
+									
+									br
+									|Each of ZarinPal services has its own specific color to be distinguishable. We promise that the blue color used in EasyPay makes you love the blue color more.
+
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="../assets/img/svg/easypay/ts-01.svg", alt="")
+
+			article.primary-step_is-o
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="../assets/img/svg/easypay/ts-02.svg", alt="")
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Buyers, Sellers
+								h1.primary-step_content_title.type-scale_delta Receiving Information
+								p.primary-step_content_praph 
+									|It would be wonderful to know who buys from us and we send the product to whom.
+								h6.primary-step_content_little For Buyers: 
+								p.primary-step_content_praph 
+									|You enter your information and after payment you will receive a receipt to keep track of your payment so that if there was a problem you can follow up using the receipt.
+
+			article.primary-step_is-y
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta For Buyers: 
+								p.primary-step_content_praph 
+									|You don’t need to keep track of your customers’ information in different places anymore! You won’t lose the buyers’ information anymore. All the information you need is collected in one place.
+								div 
+									ol.easypay_style(start="1" type="1")
+										li For each sale and product, you will know who, at what date and with what information has bought your products.
+										li You will receive free reports for your sales like a full store.
+										li You can have your social page payment gateway easily and with one link.
+
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="../assets/img/svg/easypay/ts-03.svg", alt="")
+
+			article.primary-step_is-o
+				.wrap
+					.row
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.hero--vector
+								.column_inner
+									img(src="../assets/img/svg/easypay/ts-04.svg", alt="")
+						.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
+							.column_inner
+								h2.primary-step_content_little.type-scale_zeta Setting Up:
+								h1.primary-step_content_title.type-scale_delta Only in Three Steps
+								div 
+									ol.easypay_style(start="1" type="1")
+										li  
+											a.easypay_color(href="./auth/register") Sign up for ZarinPal.
+										li 
+											a.easypay_color(href="./auth/login") Confirm your identity.
+										li  
+											a.easypay_color(href="./auth/login") Your service is ready. Define your product and sell it. That’s it. : )
+								p.primary-step_content_praph EasyPay is free for the first month. You can add the online payment to your shop on social media pages free of charge. After that, we charge you only up to 1% of the transaction.
+								a.accent-link(href="./pricing.html") More information on tariffs.
+
+						hr
+				.row
+					.column__mobile-16
+						.column_inner
+							nav.easypay-badge.ta-center-firm
+								p You can use this free service to see how much it simplifies your work.
+								a.btn-animated.btn-animated_colorset_green(href="./auth/register") Build My EasyPay
+
+	include ../partials/footer
+	<!-- /.ZarinPal -->

@@ -1,0 +1,115 @@
+/**
+	* Grid setup
+	*
+	* The grid will calculate dimensions based on these two variables
+	* $columns will inform the grid loops how many columns there should be.
+	* $gutter-width will inform the grid loops how big eac column's gutters should be.
+**/
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	width: $width-wrapper;
+	padding: 0 $gutter-width;
+	max-width: 100%;
+}
+.container{
+	@extend .wrap;
+	width: $width-container;
+}
+
+.row{
+	display: block;
+	@if $grid--negative == true {
+		margin-left: -$gutter-width;
+		margin-right: -$gutter-width;
+	}
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.column_inner{
+		padding: $gutter-width;
+	}
+}
+
+// .column__desktop-third{
+// 	width: percentage(1/3) !important;
+// }
+
+.vertical-align_middle{
+	vertical-align: middle;
+}
+.vertical-align_top{
+	vertical-align: top;
+}
+[class*="column-inline"]{
+	display: inline-block;
+    padding: 0 2px;
+    margin: 0 -2px;
+	float: none !important;
+}
+[class*="column-cell"]{
+	display: table-cell;
+	float: none !important;
+    padding: 30px 20px 20px;
+	@media (max-width: $tablet) {
+		padding: 1.5rem;
+		display: block;
+	}
+}
+%col {
+	float: right; // left
+	@if $grid--negative == true {
+		padding-left: $gutter-width;
+		padding-right: $gutter-width;
+	}
+}
+.pull-right{
+	float: right;
+}
+.pull-left{
+	float: left;
+}
+%col-flex {
+	@extend %col;
+	max-width: 100%;
+}
+
+
+@media only screen and (max-width: $tablet) {
+	.ta-center{
+		text-align: center;
+	}
+	.ta-right{
+		text-align: right;
+	}
+	.hide-on-small{ display: none !important; }
+}
+
+/**
+ * Build the grid in two steps, to help minimize file size
+ * Step 1, for each namespace, create the grid-base
+ * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+@each $val in $breakpoints {
+	$namespace: nth($val, 1);
+	@include grid-base( $namespace );
+}
+
+@each $val in $breakpoints {
+	@if length($val) == 1 {
+
+		$namespace: nth($val, 1);
+		@include grid-sizes( $namespace );
+
+	} @else {
+
+		$namespace: nth($val, 1);
+		$size: nth($val, 2);
+
+		@media only screen and (min-width: #{$size}) {
+			@include grid-sizes( $namespace );
+		}
+	}
+}

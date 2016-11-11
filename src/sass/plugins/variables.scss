@@ -1,0 +1,163 @@
+//
+//
+// *** Variables ***
+// =================
+//
+// Everything need to know CSS
+// Global variables of all kinds
+//
+$version                : '3.0.0';
+
+
+
+// Road: Grid system
+$width-wrapper		    : 74.25rem;
+$width-container		: 62.125rem;
+$columns        	    : 16;
+$gutter-width           : 15px;
+$breakpoints            : ((mobile, 20rem), (tablet, 48.25rem), (desktop, 62rem)) !default;
+$tablet					: nth(nth($breakpoints, 2), 2);
+$mobile				 	: nth(nth($breakpoints, 1), 2);
+$normal-height			: 50rem;
+$grid960				: 60rem;
+$grid--negative		    : false;
+
+
+
+// Road: Base
+$base-radius            : 2px;
+$large-radius           : 10px;
+$base-min-space         : 1rem;
+$base-max-space         : 5.35rem;
+
+
+// Road: Typography
+$font-IranSans          : "iransans";
+// $font-latin             : "Open Sans";
+// $font-light             : $font-latin, $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+$font-light             : $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+
+$typo-font-weight       : normal;
+// $typo-line-height    : 1.618;
+$typo-line-height       : 1 * 1.618 / .809;
+$typo-font-base         : 16;
+$typo-font-size			: $typo-font-base/ ($typo-font-base * 1) + rem;
+$typo-measure           : $typo-font-base * $typo-line-height;
+$typo-typescale-unit    : rem;
+
+// $typo-scale             : (
+// 	type-scale_mega     : 375.76,
+// 	type-scale_alpha    : 232.24,
+// 	type-scale_beta     : 143.53,
+// 	type-scale_gamma    : 88.71,
+// 	type-scale_delta    : 54.82,
+// 	type-scale_epsilon  : 33.88,
+// 	type-scale_zeta     : 20.94,
+// ) !default;
+$typo-scale             : (
+	type-scale_mega     : 239.20,
+	type-scale_alpha    : 159.46,
+	type-scale_beta     : 106.31,
+	type-scale_gamma    : 70.87,
+	type-scale_delta    : 47.25,
+	type-scale_epsilon  : 31.50,
+	type-scale_zeta     : 21,
+) !default;
+
+$typo-headings          : (
+	h1                  : type-scale_mega,
+	h2                  : type-scale_alpha,
+	h3                  : type-scale_beta,
+	h4                  : type-scale_gamma,
+	h5                  : type-scale_delta,
+	h6                  : type-scale_zeta
+) !default;
+
+
+
+// Road: Base Colors
+// $background             : #FAFAFA;
+$background             : #FEFEFE;
+
+// $golden					: #FDC644;
+$golden					: #FDCF41;
+$blue                   : #006DCC;
+// $green     				: #37CD61;
+$green					: #55E47C;
+$dark-purple			: #3C3744;
+
+$white-dark				: #F2F2F2;
+$gray-light				: lighten(#E0E0E0, 2.5);
+$gray					: #BDBDBD;
+$black		      		: #181818;
+$black-light			: mix($gray, $black, 25deg);
+$black-opacify			: rgba(black, .065);
+
+$blue-gray-dark 		: #7A8EAD;
+
+
+$palettes: (
+    golden: (
+        base  : $golden,
+        accent: #FFB932
+    ),
+    blue: (
+    	base  : $blue,
+    	light : #348CD8,
+    	dark  : darken($blue, 5)
+    ),
+	bluegray: (
+		base  : $blue-gray-dark,
+		dark  : darken($blue-gray-dark, 15)
+	),
+    dark: (
+		base    : $black,
+		normal  : #333333,
+		accent  : #4d4d4d,
+		gray    : #757575,
+		light   : #E0E0E0,
+		X-light : #FAFAFA
+    )
+);
+
+	// golden: (
+	// 	start: $golden,
+	// 	end: #E0C38C
+	// ),
+	// red: (
+	// 	start: #EA6D6D,
+	// 	end: #F3D799
+	// ),
+$promocase: (
+	blue: (
+		start: #326295,
+		end: #81C3C5
+	),
+	green: (
+		start: $green,
+		end: #5A8282
+	),
+	bluegray: (
+		start: $blue-gray-dark,
+		end: #394E6D
+	),
+	moss: (
+		start: #73C8A9,
+		end: #134E5E
+	)
+);
+
+$colors               	: ( golden: palette(golden), blue: palette(blue), purple: $dark-purple, green: #43A047, gray: palette(dark, gray));
+
+
+$facebook_color       	: hsla(222, 47%, 40%, 1);     // #365397
+$twitter_color        	: hsla(198, 100%, 47%, 1);    // #00a9f1
+$linkedin_color       	: hsla(203, 100%, 35%, 1);    // #006db3
+$instagram_color      	: hsla(208, 46%, 41%, 1);     // #396d9a
+// $telegram_color			: hsla(198, 75%, 55%, 1);	  // #36AFE2
+
+
+$social_colors		  	: ( facebook: $facebook_color, twitter: $twitter_color, linkedin: $linkedin_color, instagram: $instagram_color);
+
+
+$bluegray_is-o          : lighten(desaturate(palette(bluegray), 15), 30);
