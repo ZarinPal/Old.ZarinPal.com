@@ -56,7 +56,7 @@ elixir(function (mix) {
     );
 
     elixir(function (mix) {
-        mix.copy('./src/img/', 'public/img/');
+        mix.copy('./src/img/', 'public/assets/img/');
     });
 
     elixir(function (mix) {
@@ -68,7 +68,7 @@ elixir(function (mix) {
     });
 
     elixir(function (mix) {
-        mix.copy('./src/fonts/', 'public/fonts/');
+        mix.copy('./src/fonts/', 'public/assets/fonts/');
     });
 
     elixir(function (mix) {
