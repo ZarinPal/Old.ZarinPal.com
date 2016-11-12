@@ -2,8 +2,8 @@
 
 npm install -g gulp
 npm install
-git config --global user.email "zarinpal@Travis"
-git config --global user.name "zarinpal"
+git config --global user.email "ZarinPal@Travis"
+git config --global user.name "ZarinPal@Travis"
 git config --global push.default simple
 eval "$(ssh-agent -s)" #start the ssh agent
 chmod 600 .deploy_key # this key should have push access
