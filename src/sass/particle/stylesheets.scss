@@ -624,12 +624,12 @@ span[class^="star-"]{
     margin: 0 auto;
     width: 19rem;
     height: 36.5rem;
-    background-image: url("/dist/img/mockups/mockup-nexus.png");
+    background-image: url("/assets/img/mockups/mockup-nexus.png");
     background-position: center 4px;
     background-repeat: no-repeat;
     background-size: 18rem 36rem;
 	&.ios{
-		background-image: url("/dist/img/mockups/mockup-iphone-6s.png");
+		background-image: url("/assets/img/mockups/mockup-iphone-6s.png");
 		background-size: 19.5rem;
 		height: 33rem;
 	}
