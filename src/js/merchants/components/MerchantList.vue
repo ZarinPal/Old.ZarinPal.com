@@ -26,8 +26,8 @@ span
 
 	nav.pagination
 		router-link.page-link(v-if="pageInfo.currentPage - 1 > 0" tag="li" v-bind:to="{ name: 'MerchantList', params: { page: pageInfo.currentPage - 1 }}") &laquo; صفحه قبل
-		router-link.page-link(v-for="n in pageInfo.lastPage - 1" v-if="(n < pageInfo.currentPage + 6 && n > pageInfo.currentPage - 6) && pageInfo.lastPage > pageInfo.currentPage - 1 " v-bind:class="{ 'current': pageInfo.currentPage - 1 === n }" v-bind:to="{ name: 'MerchantList', params: { page: n + 1 }}") {{ n + 1 | persian }}
-		router-link.page-link(v-if="pageInfo.lastPage > 6 && pageInfo.lastPage > pageInfo.currentPage" v-bind:to="{ name: 'MerchantList', params: { page: pageInfo.currentPage + 1 }}") صفحه بعد &raquo;
+		router-link.page-link(v-for="n in pageInfo.lastPage" v-if="(n < pageInfo.currentPage + 6 && n > pageInfo.currentPage - 6) && pageInfo.lastPage > pageInfo.currentPage - 1 " v-bind:class="{ 'current': pageInfo.currentPage === n }" v-bind:to="{ name: 'MerchantList', params: { page: n }}") {{ n | persian }}
+		router-link.page-link(v-if="pageInfo.lastPage > pageInfo.currentPage" v-bind:to="{ name: 'MerchantList', params: { page: pageInfo.currentPage + 1 }}") صفحه بعد &raquo;
 
 
 
