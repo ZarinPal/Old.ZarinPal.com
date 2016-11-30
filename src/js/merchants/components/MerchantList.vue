@@ -14,7 +14,7 @@ span
 
 				.category
 					svg.svg--icon(width="24" height="24" viewBox="0 0 30 33")
-						use(v-bind:href="'#'+catInfo.parent.slug" v-bind::fill="colors[index]")
+						use(v-bind:xlink:href="'#'+catInfo.parent.slug" v-bind::fill="colors[index]")
 					span {{ catInfo.child.title }}
 						small {{ catInfo.parent.title }}
 				.row

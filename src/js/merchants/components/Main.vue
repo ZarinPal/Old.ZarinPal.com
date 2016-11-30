@@ -13,7 +13,7 @@ span
 
 				.base
 					svg.svg--icon(width="24" height="24" viewBox="0 0 30 33")
-						use(v-bind:href="'#' + cat.category.slug" v-bind:fill="colors[index]")
+						use(v-bind:xlink:href="'#' + cat.category.slug" v-bind:fill="colors[index]")
 					span {{ cat.category.title }}
 
 				ul(v-for="item in cat.subCats")
