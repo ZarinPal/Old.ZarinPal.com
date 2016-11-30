@@ -1,5 +1,5 @@
-<template lang="jade">
-
+<template lang="pug">
+span
 	.loading(v-if="loading")
 		i.loadbar
 
@@ -8,33 +8,32 @@
 		hr.fancy
 	//- h6.breadcrumb(v-if="catInfo") {{ catInfo.parent.title }} » {{ catInfo.child.title }}
 
-	.column__mobile-16.column__tablet-8.column__desktop-4.merchant-cell(v-for="merchant in merchantItems")
-		a.merchant(href="http://{{ merchant.domain }}?utm_campaign=ZarinPalMerchant&utm_medium=banner&utm_source=ZarinPal" target="_blank")
-			figure.merch-figure(v-if="show" transition="expand" v-bind:style="{ 'border-color': colors[$index] }")
+	.column__mobile-16.column__tablet-8.column__desktop-4.merchant-cell(v-for="(merchant, index) in merchantItems")
+		a.merchant(:href="'http://' + merchant.domain + '?utm_campaign=ZarinPalMerchant&utm_medium=banner&utm_source=ZarinPal'" target="_blank")
+			figure.merch-figure(v-if="show" transition="expand" v-bind:style="{ 'border-color': colors[index] }")
 
 				.category
 					svg.svg--icon(width="24" height="24" viewBox="0 0 30 33")
-						use(xlink:href="#{{ catInfo.parent.slug }}" fill="{{ colors[$index] }}")
+						use(v-bind:href="'#'+catInfo.parent.slug" v-bind::fill="colors[index]")
 					span {{ catInfo.child.title }}
 						small {{ catInfo.parent.title }}
 				.row
-					img.picto(v-bind:src="merchant.logo" alt="{{ merchant.siteName }}" v-bind:style="{ 'background-color': colors[$index] }")
+					img.picto(v-bind:src="merchant.logo" v-bind::alt="merchant.siteName" v-bind:style="{ 'background-color': colors[index] }")
 					h2.titly {{ merchant.siteName | truncString }}
 				p.decly {{ merchant.siteContent | truncString }}
 				p.dately {{ merchant.createdAt | persian }}
 				p.urly {{ merchant.domain }}
 
 	nav.pagination
-		a.page-link(v-if="pageInfo.currentPage - 1 > 0" v-link="{ 'path': pageInfo.currentPage - 1 }") &laquo; صفحه قبل
-		a.page-link(v-for="n in pageInfo.lastPage - 1" v-if="(n < pageInfo.currentPage + 6 && n > pageInfo.currentPage - 6) && pageInfo.lastPage > pageInfo.currentPage - 1 " v-bind:class="{ 'current': pageInfo.currentPage - 1 === n }" v-link="{ 'path': n + 1 }") {{ n + 1 | persian }}
-		a.page-link(v-if="pageInfo.lastPage > 6 && pageInfo.lastPage > pageInfo.currentPage" v-link="{ 'path': pageInfo.currentPage + 1 }") صفحه بعد &raquo;
+		router-link.page-link(v-if="pageInfo.currentPage - 1 > 0" tag="li" v-bind:to="{ name: 'MerchantList', params: { page: pageInfo.currentPage - 1 }}") &laquo; صفحه قبل
+		router-link.page-link(v-for="n in pageInfo.lastPage - 1" v-if="(n < pageInfo.currentPage + 6 && n > pageInfo.currentPage - 6) && pageInfo.lastPage > pageInfo.currentPage - 1 " v-bind:class="{ 'current': pageInfo.currentPage - 1 === n }" v-bind:to="{ name: 'MerchantList', params: { page: n + 1 }}") {{ n + 1 | persian }}
+		router-link.page-link(v-if="pageInfo.lastPage > 6 && pageInfo.lastPage > pageInfo.currentPage" v-bind:to="{ name: 'MerchantList', params: { page: pageInfo.currentPage + 1 }}") صفحه بعد &raquo;
+
 
 
 </template>
 
 <script>
-// import store from '../stores/';
-
 export default {
 	name: 'MerchantList',
 	data() {
@@ -52,46 +51,35 @@ export default {
 	methods: {
 		fetchData(cat, pageNum) {
 			this.$http.get(`https://www.zarinpal.com/panel/frontPage/webServicesList.json/${cat}?page=${pageNum}`).then(res => {
-				this.$set('catInfo', res.data.catInfo);
-				this.$set('merchantItems', res.data.list);
-				this.$set('pageInfo', res.data.pageInfo);
-				this.$set('loading', false);
-				this.$set('catId', cat);
+				this.$set(this, 'catInfo', res.data.catInfo);
+				this.$set(this, 'merchantItems', res.data.list);
+				this.$set(this, 'pageInfo', res.data.pageInfo);
+				this.$set(this, 'loading', false);
+				this.$set(this, 'catId', cat);
 
-				const nTitle = `${res.data.catInfo.parent.title} » ${res.data.catInfo.child.title}`
+				const nTitle = `${res.data.catInfo.parent.title} » ${res.data.catInfo.child.title}`;
 
 				document.title = `${nTitle} • پذیرندگان | زرین‌پال، کیف‌پول الکترونیک`;
 
 				// this.totalPages();
 			});
 		},
-		// totalPages() {
-		// 	console.log(this.merchantItems.length);
-		// }
 	},
 
-	ready() {
+    mounted() {
 		// Get Merchant Items data
 		this.fetchData(this.$route.params.cat, this.$route.params.page);
 	},
-
-	route: {
-		data ({ to }) {
-			const page = to.params.page;
+    watch: {
+        '$route' (to, from) {
+            const page = to.params.page;
 			const cat = to.params.cat;
 
-			this.$set('loading', true);
-			this.$set('merchantItems', '');
+			this.$set(this, 'loading', true);
+			this.$set(this, 'merchantItems', '');
 			this.fetchData(cat, page);
-		}
-	},
-
-	// computed: {
-	// 	totalPages() {
-	// 		console.log(this.merchantItems.length);
-	// 		// return this.merchantItems.length
-	// 	}
-	// },
+        }
+    },
 
 	filters: {
 		persian(str) {
