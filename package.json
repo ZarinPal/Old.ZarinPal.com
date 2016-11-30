@@ -7,26 +7,23 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-pug-inheritance": "^0.2.1",
-    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir-browserify-official": "^0.1.3",
     "laravel-elixir-pug": "^1.3.2",
-    "laravel-elixir-jade": "^0.2.4",
-    "laravel-elixir-vue": "^0.1.4",
+    "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.14.0",
-    "pug": "^2.0.0-beta6",
-    "sass": "^0.5.0",
-    "sass-loader": "^4.0.2"
-  },
-  "dependencies": {
-    "laravel-elixir-pug": "^1.3.2",
+    "lodash": "^4.16.2",
     "open-browser-webpack-plugin": "0.0.2",
     "pug": "^2.0.0-beta6",
-    "vue": "^1.0.21",
-    "vue-hot-reload-api": "^1.3.2",
-    "vue-html-loader": "^1.2.2",
-    "vue-loader": "^8.2.3",
-    "vue-resource": "^0.7.0",
-    "vue-router": "^0.7.13",
-    "vue-style-loader": "^1.0.0"
+    "sass": "^0.5.0",
+    "sass-loader": "^4.0.2",
+    "vue": "^2.0.1",
+    "vue-hot-reload-api": "^2.0.6",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^10.0.1",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.0.3",
+    "vue-style-loader": "^1.0.0",
+    "vueify": "^9.3.0"
   }
 }
