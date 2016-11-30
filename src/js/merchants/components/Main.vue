@@ -1,5 +1,5 @@
-<template lang="jade">
-
+<template lang="pug">
+span
 	.loading(v-if="loading")
 		i.loadbar
 
@@ -7,20 +7,18 @@
 		h6.section-merchant.major--title_light.ta-center-firm دسته‌بندی پذیرندگان
 		hr.fancy
 
-	.column__mobile-16.column__tablet-8.column__desktop-4.merchant-cell(v-for="cat in catList")
+	.column__mobile-16.column__tablet-8.column__desktop-4.merchant-cell(v-for="(cat, index) in catList")
 		.merchant
-			figure.car-figure(v-if="show" transition="expand" v-bind:style="{ 'border-color': colors[$index] }")
+			figure.car-figure(v-if="show" transition="expand" v-bind:style="{ 'border-color': colors[index] }")
 
 				.base
 					svg.svg--icon(width="24" height="24" viewBox="0 0 30 33")
-						use(xlink:href="#{{ cat.category.slug }}" fill="{{ colors[$index] }}")
+						use(v-bind:href="'#' + cat.category.slug" v-bind:fill="colors[index]")
 					span {{ cat.category.title }}
 
 				ul(v-for="item in cat.subCats")
-					li(id="{{ item.slug }}")
-						a(href="#/cat/{{ item.publicId }}/page/1") {{ item.title }}
-
-
+					li(v-bind:id="item.slug")
+						a(v-bind:href="'#/cat/'+item.publicId + '/page/1'") {{ item.title }}
 </template>
 
 <script>
@@ -38,15 +36,15 @@ export default {
 	methods: {
 		fetchData() {
 			this.$http.get(`https://www.zarinpal.com/panel/frontPage/webServicesCat.json/`).then(res => {
-				this.$set('catList', res.data);
+				this.$set(this, 'catList', res.data);
 				// this.$set('merchantItems', res.data.list);
-				this.$set('loading', false);
+				this.$set(this, 'loading', false);
 			});
 		}
 	},
 
-	ready() {
-		// Get Merchant Items data
+    mounted() {
+        // Get Merchant Items data
 		this.fetchData();
 	},
 

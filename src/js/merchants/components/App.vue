@@ -1,8 +1,5 @@
-<template lang="jade">
+<template lang="pug">
 	section.merchants
-		//- .container
-		//- 	h6.section-merchant کسب و کارهایی که به مشتریان خود اهمیت می‌دهند، زرین‌پال را انتخاب می‌کنند.
-		//- 	hr.fancy
 		.wrap
 			.row.row-merch
 				svg(width="0" height="0")
@@ -27,43 +24,10 @@
 							path(d="M22.154 19C19.864 19 18 20.86 18 23.15s1.863 4.152 4.154 4.152c2.287 0 4.148-1.86 4.148-4.152 0-2.29-1.86-4.15-4.148-4.15zm0 7.226c-1.697 0-3.078-1.38-3.078-3.076 0-1.695 1.38-3.074 3.078-3.074 1.693 0 3.072 1.38 3.072 3.074 0 1.697-1.38 3.076-3.072 3.076zm-14.46-.002c-1.696 0-3.077-1.38-3.077-3.076 0-1.695 1.38-3.074 3.078-3.074 1.695 0 3.076 1.38 3.076 3.074 0 1.697-1.38 3.076-3.075 3.076zm0-7.226c-2.29 0-4.15 1.86-4.15 4.15s1.86 4.152 4.15 4.152 4.153-1.86 4.153-4.152c0-2.29-1.863-4.15-4.152-4.15zm21.126-3.582h-4.322V9.254h4.322v6.162zm1.076.476V8.716c0-.297-.242-.54-.54-.54H19.102V5.082c0-.296-.24-.536-.536-.536H.466c-.297 0-.54.24-.54.537v18.067c0 .3.243.54.54.54h1.818c.297 0 .54-.24.54-.54 0-.297-.243-.537-.54-.537h-1.28V5.618h17.02V19.13c0 .297.242.54.54.54.296 0 .536-.243.536-.54V9.253h4.322v6.7c0 .298.24.538.537.538h4.858v6.12h-1.262c-.297 0-.537.24-.537.537 0 .3.24.54.536.54h1.8c.296 0 .538-.24.538-.54v-7.133c.002-.023.025-.037.025-.06 0-.025-.022-.038-.024-.062zm-13.153 6.72h-3.64c-.298 0-.538.24-.538.536 0 .3.24.54.537.54h3.64c.298 0 .538-.24.538-.54 0-.297-.24-.537-.537-.537z")
 
 				router-view(keep-alive)
-
-				//- nav.pagination
-					//- a.page-link(v-link="{ path: '1' }") ۱
-					//- a.page-link(v-link="{ path: '2' }") ۲
-					//- a.page-link(v-link="{ path: '3' }") ۳
-					//- a.page-link(v-link="{ path: '4' }") ۴
-					//- a.page-link(v-link="{ path: '5' }") ۵
-					//- a.page-link(v-link="{ path: '6' }") ۶
-					//- a.page-link(v-link="{ path: '7' }") ۷
-					//- a.page-link(v-link="{ path: '8' }") ۸
-				//- a.page-link(v-link="{ path: '/page/{{$route}}' }") صفحه بعدی
 </template>
 
 <script>
-import store from '../stores/';
-
-
 export default {
-	// data () {
-	// 	return {
-	// 		item: {},
-	// 		comments: [],
-	// 		pollOptions: null
-	// 	}
-	// },
-	// route: {
-	// 	data ({ to }) {
-	// 		return store.fetchItem(to.params.id).then(item => {
-	// 			document.title = `${catInfo.parent.title} • پذیرندگان | زرین‌پال، کیف‌پول الکترونیک`;
-	// 			return {
-	// 				item,
-	// 				// the final resolved data can further contain Promises
-	// 				comments: store.fetchItems(item.kids),
-	// 				pollOptions: item.type === 'poll' ? store.fetchItems(item.parts) : null,
-	// 			}
-	// 		});
-	// 	}
-	// },
+    name:"app"
 }
 </script>

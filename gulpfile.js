@@ -1,7 +1,6 @@
 const elixir = require('laravel-elixir');
+require('laravel-elixir-vue-2');
 require('laravel-elixir-pug');
-require('laravel-elixir-jade');
-require('laravel-elixir-vue');
 
 
 /*
@@ -16,12 +15,17 @@ require('laravel-elixir-vue');
  */
 
 elixir(function (mix) {
+    mix.webpack(
+        './src/js/merchants/app.js',
+        './public/assets/js/merchants/app.js'
+    );
+    //
     mix.pug(
         {
             // Compile to blade.php files or html files
             blade: false,
             // Pretty output or uglified
-            pretty: true,
+            pretty: false,
             // Source of pug files
             src: 'src/pug/',
             // Files to look for, useful if you are still naming files .pug
@@ -50,29 +54,15 @@ elixir(function (mix) {
         'public/assets/css/en.css'
     );
 
-    mix.webpack(
-        './src/js/merchants/app.js',
-        './public/assets/js/merchants/app.js'
-    );
 
-    elixir(function (mix) {
-        mix.copy('./src/img/', 'public/assets/img/');
-    });
+    mix.copy('./src/img/', 'public/assets/img/');
 
-    elixir(function (mix) {
-        mix.copy('./src/img/favicons/', 'public/');
-    });
+    mix.copy('./src/img/favicons/', 'public/');
 
-    elixir(function (mix) {
-        mix.copy('./src/js/raw/', 'public/assets/js/');
-    });
+    mix.copy('./src/js/raw/', 'public/assets/js/');
 
-    elixir(function (mix) {
-        mix.copy('./src/fonts/', 'public/assets/fonts/');
-    });
+    mix.copy('./src/fonts/', 'public/assets/fonts/');
 
-    elixir(function (mix) {
-        mix.copy('./src/manifests/', 'public/');
-    });
+    mix.copy('./src/manifests/', 'public/');
 
 });

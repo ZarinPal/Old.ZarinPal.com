@@ -1,31 +1,42 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 import VueResource from 'vue-resource';
-import App from './components/App.vue';
 import MerchantList from './components/MerchantList.vue';
 import Main from './components/Main.vue';
+import app from './components/App.vue';
 
-Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
-// routing
-const router = new VueRouter();
-
-router.map({
-	'cat/:cat/page/:page': {
-		component: MerchantList,
-	},
-	'main': {
-		component: Main,
-	}
+const router = new VueRouter({
+    base: __dirname,
+    routes: [
+        {
+            path: '/cat/:cat/page/:page',
+            name: 'MerchantList',
+            component: MerchantList
+        },
+        {
+            path: '/main',
+            name: 'Main',
+            component: Main
+        },
+        {
+            path: '/',
+            redirect: {
+                name: 'Main'
+            }
+        }
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
 });
 
-router.beforeEach(function () {
-	window.scrollTo(0, 0);
+new Vue({
+    el: '#app',
+    router,
+    components: {
+        app
+    }
 });
-
-router.redirect({
-	'*': '/main/',
-});
-
-router.start(App, '#app');
