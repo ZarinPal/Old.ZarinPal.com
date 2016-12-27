@@ -26,10 +26,13 @@ define(['jquery'], function ($) {
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(Lat, Lang),
 			map: map,
-			optimized: false
+			optimized: false,
+			animation: google.maps.Animation.BOUNCE,
+			icon: 'assets/img/map-marker.png',
 		});
 	};
 
 	google.maps.event.addDomListener(window, 'load', initialize);
+
 });
 //# sourceMappingURL=contact.js.map
