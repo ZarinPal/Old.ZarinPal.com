@@ -260,8 +260,9 @@ define(['jquery', 'bowser'], function ($, bowser) {
     // $('.global--header__promocases-item:first').addClass('active-slide');
     // $('.slider-dots li:first').addClass('active-dot');
 
+    // NEWSLETTER
     $("#newsletter").submit(function(event) {
-        alert('fffff');
+
     });
     /**
      * Menu UL-SPAN::

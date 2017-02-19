@@ -1,3 +1,6 @@
+.hidden{
+  display: none;
+}
 .global--navigation{
     position: relative;
     min-height: 3.5rem;
@@ -218,7 +221,7 @@
 .unique--brands {
     display: block;
     position: relative;
-    padding: $base-max-space * 1.125 0;
+    padding: 2em 0;
     // background-color: #FFF;
     &--little {
         // font-size: 1.115rem;
@@ -1148,4 +1151,292 @@ span[class^="star-"]{
 	.global--footer_social a svg {
 		width: 2.06875rem;
 	}
+}
+
+.features{
+  margin:0 0 $base-space;
+  h3{
+    color:#333;
+    margin-bottom:-.5em;
+  }
+  h4{
+    color:#757575;
+    margin:2em .5em .5em;
+  }
+}
+.feature{
+  border:1px solid #ddd;
+  border-radius:5px;
+  float:right;
+  width:30.333333333%;
+  margin:5% 1.5%;
+  padding:7px;
+  color:#666;
+  //box-shadow: 0 1px .7px #777;
+  //transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;
+  transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -webkit-transition: border .25s ease-in-out;
+  //&:hover{
+  //box-shadow: 0 2.3px 3.3px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.22);
+  //border-color:#bcbcbc;
+  //color:#222;
+  // }
+  &:nth-child(4){
+    margin-bottom:0;
+  }
+  &:nth-child(5){
+    margin-bottom:0;
+  }
+  &:nth-child(6){
+    margin-bottom:0;
+  }
+  img{
+    display: block;
+    margin: -21% auto 0 auto;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:50%;
+    padding:12px;
+    transition: border .25s ease-in-out;
+    -moz-transition: border .25s ease-in-out;
+    -webkit-transition: border .25s ease-in-out;
+    //&:hover{
+    //  border-color:#bcbcbc;
+    //}
+  }
+  p{
+    font-size:13px;
+    padding:17px 12px;
+    margin:0;
+  }
+  h5{
+    font-size:18px;
+    text-align:center;
+    margin:15px 0 -5px;
+  }
+}
+
+.testimonial{
+  background: #fafafa;
+  padding: 30px 30px 10px;
+  height:auto;
+  border-radius: 2px;
+  // box-shadow: 0 1px 4px #e7e7e7;
+  min-height:185px;
+  margin:15px;
+  img{
+    float:right;
+    border-radius:50%;
+    box-shadow:0 1px 1px #ccc;
+    width:auto;
+  }
+  p{
+    float:left;
+    font-size: 15px;
+    color: #777;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 0;
+    width:77.777777%;
+    text-align:right;
+    padding-right:5px;
+    padding-bottom:7px;
+    &:before{
+      content: '\201C';
+      font-size: 8.5em;
+      opacity: .1;
+      height:0;
+      float: left;
+      text-shadow: none;
+    }
+  }
+  .name{
+    padding: 12px 5px 5px;
+    display:inline-block;
+    float:right;
+    margin-right:110px;
+    color:#777 !important;
+    a{
+      color:#777 !important;
+    }
+  }
+}
+
+
+.zarin {
+  color: #FDCF41 !important;
+}
+
+.appdl {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #ebebeb;
+  margin-top: 10px;
+  max-width: 95%;
+  border-radius: 3px;
+  padding: 10px 54px;
+  font-size: 13px;
+  font-weight: 300;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  color: #292e31;
+  margin-left: 1em;
+  &:last-child {
+    margin-right: 1em;
+    margin-left: 0 !important;
+  }
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.cafebazaar:hover svg {
+  fill: #91b42f !important;
+}
+
+.playstore:hover svg {
+  fill: #FF5722 !important;
+}
+
+.appdl .vector-icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5rem;
+  margin-left: .75em;
+  fill: #677A80;
+  -webkit-transition: .275s ease-in-out;
+  transition: .275s ease-in-out;
+}
+
+.fheart {
+  width: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  margin: 7px;
+  -webkit-animation: heartBeat 1s ease infinite 0s;
+  animation: heartBeat 1s ease infinite 0s;
+  &:hover {
+    -webkit-animation: heartBeat 0.8s ease infinite 0s;
+    animation: heartBeat 0.8s ease infinite 0s;
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #bf0b0b;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100px;
+    background-color: #bf0b0b;
+  }
+  &:before {
+    left: -5px;
+    top: 0;
+  }
+  &:after {
+    right: 0;
+    top: -5px;
+  }
+}
+
+@-webkit-keyframes heartBeat {
+  0% {
+    zoom: 100%;
+  }
+
+  15% {
+    zoom: 120%;
+  }
+
+  25% {
+    zoom: 110%;
+  }
+
+  35% {
+    zoom: 120%;
+  }
+
+  100% {
+    zoom: 100%;
+  }
+}
+
+
+@keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  15% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  35% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.light2 {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, transparent), color-stop(40%, transparent), color-stop(50%, rgba(255, 255, 255, 0.6)), color-stop(60%, transparent), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%, transparent 100%);
+  background: -webkit-linear-gradient(315deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%, transparent 100%);
+  background: linear-gradient(135deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=1 );
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 300%;
+  &:hover {
+    animation: light2 0.8s;
+    -webkit-animation: light2 0.8s;
+  }
+}
+
+@keyframes light2 {
+  0% {
+    background-position: -600px;
+  }
+
+  100% {
+    background-position: 0px;
+  }
+}
+
+
+@-webkit-keyframes light2 {
+  0% {
+    background-position: -600px;
+  }
+
+  100% {
+    background-position: 0px;
+  }
 }
