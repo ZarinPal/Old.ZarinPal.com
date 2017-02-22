@@ -1185,14 +1185,9 @@ span[class^="star-"]{
   //border-color:#bcbcbc;
   //color:#222;
   // }
-  &:nth-child(4){
-    margin-bottom:0;
-  }
-  &:nth-child(5){
-    margin-bottom:0;
-  }
-  &:nth-child(6){
-    margin-bottom:0;
+  @media screen and (max-width: 414px){
+    width:100%;
+    margin:12% 0;
   }
   img{
     display: block;
@@ -1223,16 +1218,19 @@ span[class^="star-"]{
 .testimonial{
   background: #fafafa;
   padding: 30px 30px 10px;
-  height:auto;
+  display: inline-block;
   border-radius: 2px;
-  // box-shadow: 0 1px 4px #e7e7e7;
-  min-height:185px;
+  box-shadow: 0 1px 4px #e7e7e7;
   margin:15px;
   img{
     float:right;
     border-radius:50%;
     box-shadow:0 1px 1px #ccc;
     width:auto;
+    @media screen and (max-width: 414px){
+      float: none;
+      margin: auto 0;
+    }
   }
   p{
     float:left;
@@ -1252,6 +1250,10 @@ span[class^="star-"]{
       float: left;
       text-shadow: none;
     }
+    @media screen and (max-width: 414px){
+      float: none;
+      width: 100%;
+    }
   }
   .name{
     padding: 12px 5px 5px;
@@ -1261,6 +1263,10 @@ span[class^="star-"]{
     color:#777 !important;
     a{
       color:#777 !important;
+    }
+    @media screen and (max-width: 414px){
+      margin-right:0;
+      float: left;
     }
   }
 }

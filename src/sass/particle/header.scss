@@ -247,6 +247,9 @@
 			}
         }
         &-inline {
+          @media screen and (max-width: $tablet){
+            display: none;
+          }
             margin: 0;
             li {
 				position: relative;
@@ -265,7 +268,7 @@
                     }
                 }
             }
-            @media screen and (max-width: #{$tablet}) {
+            @media screen and (max-width: $tablet) {
                 list-style: none;
                 white-space: nowrap;
                 width: auto;
@@ -273,7 +276,7 @@
                 li:first-child{ margin-right: 1rem; }
             }
         }
-        @media screen and (max-width: #{$mobile}) {
+        @media screen and (max-width: $mobile) {
             .infinity--links{
                 overflow-x: scroll;
                 overflow-y: hidden;
@@ -285,7 +288,7 @@
         }
         .column_inner {
             padding: .625em 0;
-            @media screen and (max-width: #{$tablet}) {
+            @media screen and (max-width: $tablet) {
                 padding: 0;
             }
             //////shima
@@ -472,4 +475,156 @@
             }
         }
     }
+}
+
+
+.menu-icon-wrapper {
+  position: relative;
+  display: none;
+  width: 34px;
+  height: 34px;
+  margin: 0.1em 0 0 1em;
+  pointer-events: none;
+  transition: 0.1s;
+  float: left;
+  z-index:9;
+  @media screen and(max-width: 414px){
+    margin: 0.1em 0 0 0;
+  }
+  @media screen and (max-width: $tablet){
+    display: inline-block;
+  }
+  &.scaled {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  svg {
+    position: absolute;
+    top: -33px;
+    left: -33px;
+    -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    @media screen and(max-width: 414px){
+      left: -42px;
+    }
+    path {
+      stroke: #fff;
+      stroke-width: 40px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: transparent;
+    }
+  }
+  .menu-icon-trigger {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    pointer-events: auto;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.dummy__bg{
+  display: none;
+  &__active{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index:1;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    display: inline-block;
+    top:0;
+    right:320px;
+    @media screen and(max-width: 414px){
+      right: 275px;
+    }
+  }
+  &__out{
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+  }
+}
+
+.dummy{
+  ul{
+    display: none;
+  }
+  &__active{
+      position: fixed;
+      width: 320px;
+      height: 100%;
+      background: #fff;
+      top:0;
+      right:0;
+      -webkit-animation-duration: 0.2s;
+      animation-duration: 0.2s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeInRight;
+      animation-name: fadeInRight;
+    ul{
+      padding: 0;
+      margin:0;
+      height: inherit;
+      overflow-x: hidden;
+      width: 100%;
+      li{
+        list-style: none;
+        a{
+          height:38px;
+          width:100%;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 600;
+          color:#333;
+          padding:32px;
+          float: left;
+          &.en{
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    @media screen and(max-width: 414px){
+      width:275px;
+    }
+  }
+  &__out{
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+    ul{
+      display: none;
+    }
+  }
+  @media screen and(min-width: $tablet){
+    display: none;
+  }
 }

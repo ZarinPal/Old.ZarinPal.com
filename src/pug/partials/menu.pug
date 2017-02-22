@@ -41,13 +41,43 @@
 				h1.hero--logo_zarinpal زرین‌پال
 
 			//a.btn.btn-white.small.tiny(href="/panel") پنل کاربری
-			a.btn-inline(href="/panel") پنل کاربری
-			//a.btn-inline(href="/auth/register") ثبت‌نام
-			//a.btn-inline(href="/auth/login") ورود به زرین‌پال
-
+			a.btn-inline(href="/auth/register") ثبت‌نام
+			a.btn-inline(href="/auth/login") ورود به زرین‌پال
+	#menu-icon-wrapper.menu-icon-wrapper
+		svg(width='1000px', height='1000px')
+			path#pathA(d='M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800')
+			path#pathB(d='M 300 500 L 700 500')
+			path#pathC(d='M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200')
+		button#menu-icon-trigger.menu-icon-trigger
+	// menu-icon-wrapper
+	#dummy__bg
+	#dummy.dummy
+		ul
+			li
+				a(href="/app.html") اپلیکیشن
+			li
+				a(href="/pricing.html") تعرفه‌ها
+			li
+				a(href="/merchant.html") پذیرندگان
+			li
+				a(href="/lab/") آزمایشگاه
+			li
+				a(href="/blog/") وبلاگ
+			li
+				a(href="/zarincard.html") زرین‌کارت
+			//- li
+				a(href="/pricing.html") تعرفه
+			li
+				a(href="/faq.html") سوالات متداول
+			li
+				a(href="/about.html") درباره ما
+			li
+				a(href="/contact.html") تماس با ما
+			li
+				a.en(href="/en/" target="_blank" title="English version of ZarinPal") English Site
 	.column__mobile-16.column__tablet-9.mobile-version
 		//- a.navbar-toggle(href="")
-		.column_inner
+	.column_inner
 			//- a.btn.btn-gold 
 			.ta-left.ta-right
 				.infinity--links
@@ -55,7 +85,7 @@
 						li
 							a(href="/app.html") اپلیکیشن
 						li 
-							a(href="/pricing.html") تعرفه
+							a(href="/pricing.html") تعرفه‌ها
 						li 
 							a(href="/merchant.html") پذیرندگان
 						li

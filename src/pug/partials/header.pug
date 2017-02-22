@@ -28,11 +28,11 @@
 							.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
 								.column_inner
 									figcaption
-										h4.global--header__promocases-item_little نسخه جدید،
-										h3.global--header__promocases-item_title یک تحول بزرگ، زرین‌پال جدید همین‌جاست!
-										p.global--header__promocases-item_praph جدیدترین و بهترین نسخه زرین‌پال تا کنون را مشاهده می‌کنید. امیدواریم این تغییرات برای شما تجربه بهتری ایجاد کند.
+										h4.global--header__promocases-item_little منتشر شد،
+										h3.global--header__promocases-item_title نسخه ۳ اپلیکیشن زرین‌پال
+										p.global--header__promocases-item_praph هم اکنون میتوانید نسخه سوم اپلیکیشن زرین پال برای گوشی های اندوریدی را از مارکت گوگل پلی و کافه بازار دریافت کنید.
 										nav.global--header__promocases-item_nav
-											a.btn.btn-transparent.large(href="#Hello-ZarinPal") زرین‌پال چیست؟
+											a.btn.btn-transparent.large(href="/app.html") دانلود
 							.column__mobile-16.column__tablet-8.column-inline.vertical-align_middle
 								.hero--vector
 									.column_inner
@@ -261,7 +261,7 @@
 -else if(merchant === true)
 	header.global--header.soft-void(class="global--header_is-sky")
 		section.global--header-holder
-			nav.global--sticky.global--header-nav.global--header-nav--self
+			nav.global--sticky.global--header-nav.global--header-nav--transparent
 				.wrap
 					.row
 						include menu
@@ -272,6 +272,54 @@
 					h1.global--header__promocases-item_title بهترین‌ها با ما کار می‌کنند
 					h3.global--header__promocases-item_little کسب و کارهایی که به مشتریان خود اهمیت می‌دهند، زرین‌پال را انتخاب می‌کنند.
 					//- h3.global--header__promocases-item_little خلاق، همدل، متخصص و متعهد به کار، دوست و صد البته خوشحال :)
+-else if(pricing === true)
+	header.global--header.soft-void.global--header_is-blue
+		section.global--header-holder
+			nav.global--sticky.global--header-nav.global--header-nav--transparent
+				.wrap
+					.row
+						include menu
+		section.global--header__promocases.min-padding.effective
+			.wrap
+				.ta-center-firm
+					h1.global--header__promocases-item_title تعرفه‌ها
+					h3.global--header__promocases-item_little کارمزدهای کم، مخاطبان بیشتر
+-else if(aboutPage === true)
+	header.global--header.soft-void.global--header_is-green
+		section.global--header-holder
+			nav.global--sticky.global--header-nav.global--header-nav--transparent
+				.wrap
+					.row
+						include menu
+		section.global--header__promocases.min-padding.effective
+			.wrap
+				.ta-center-firm
+					h1.global--header__promocases-item_title درباره ما
+					h3.global--header__promocases-item_little زرین‌پال بهترین و بزرگترین درگاه اینترنتی کشور که روزانه به بیش از ۲۰٫۰۰۰ کسب و کار سرویس پرداخت ارائه می‌دهد.
+-else if(contactPage === true)
+	header.global--header.soft-void.global--header_is-moss
+		section.global--header-holder
+			nav.global--sticky.global--header-nav.global--header-nav--transparent
+				.wrap
+					.row
+						include menu
+		section.global--header__promocases.min-padding.effective
+			.wrap
+				.ta-center-firm
+					h1.global--header__promocases-item_title تماس با ما
+					h3.global--header__promocases-item_little تماسی از جنس زرین‌پال
+-else if(faqPage === true)
+	header.global--header.soft-void.global--header_is-bluegray
+		section.global--header-holder
+			nav.global--sticky.global--header-nav.global--header-nav--transparent
+				.wrap
+					.row
+						include menu
+		section.global--header__promocases.min-padding.effective
+			.wrap
+				.ta-center-firm
+					h1.global--header__promocases-item_title سوالات متداول
+					h3.global--header__promocases-item_little راهنمای سریع کاربران زرین‌پالی
 -else if(menuSelf_en === true)
 	header.global--header.soft-void(class="global--header_is-frozen")
 		section.global--header-holder

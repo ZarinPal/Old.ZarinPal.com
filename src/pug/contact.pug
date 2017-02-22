@@ -3,6 +3,8 @@ extends partials/layout
 block project-info
 	- var pagename = 'تماس با ما'
 	- var single_fa = true
+	- var HelloWithEffect = true
+	- var contactPage = true
 
 block content
 
@@ -12,10 +14,7 @@ block content
 
 	section.section--primary
 		.container
-			//- h4.section--primary--little تماسی از جنس زرین‌پال
-			h1.section--primary--title تماس با ما
-			hr.fancy
-
+			br
 	section.section
 		.container
 			.row
@@ -70,7 +69,7 @@ block content
 								textarea.input.is-border.textarea(type="text" name="content" placeholder="متن پیام" required="true" row="30")
 							div(class="g-recaptcha" data-sitekey="6Lcrtc4SAAAAAKekvip0yI9Dp2DKXyVtliBXnqHS")
 							label.label
-								button.btn.btn-blue ثبت
+								button.pull-left.btn.btn-blue ثبت
 block footer
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
 	script(src='https://www.google.com/recaptcha/api.js?hl=fa-IR')
