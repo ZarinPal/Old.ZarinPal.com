@@ -64,5 +64,8 @@ elixir(function (mix) {
     mix.copy('./src/fonts/', 'public/assets/fonts/');
 
     mix.copy('./src/manifests/', 'public/');
-
+    mix.browserSync(
+    {
+        proxy 			: "zarinpal.dev"
+    });
 });
