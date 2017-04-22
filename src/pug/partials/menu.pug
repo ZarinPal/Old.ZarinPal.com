@@ -43,13 +43,16 @@
 			//a.btn.btn-white.small.tiny(href="/panel") پنل کاربری
 			a.btn-inline(href="/auth/register") ثبت‌نام
 			a.btn-inline(href="/auth/login") ورود به زرین‌پال
-	#menu-icon-wrapper.menu-icon-wrapper
-		svg(width='1000px', height='1000px')
-			path#pathA(d='M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800')
-			path#pathB(d='M 300 500 L 700 500')
-			path#pathC(d='M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200')
-		button#menu-icon-trigger.menu-icon-trigger
-	// menu-icon-wrapper
+	//- #menu-icon-wrapper.menu-icon-wrapper
+	//- 	svg(width='1000px', height='1000px')
+	//- 		path#pathA(d='M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800')
+	//- 		path#pathB(d='M 300 500 L 700 500')
+	//- 		path#pathC(d='M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200')
+	//- 	button#menu-icon-trigger.menu-icon-trigger
+	//- // menu-icon-wrapper
+	button(class="menu-icon-wrapper hamburger hamburger--squeeze" type="button")
+		span.hamburger-box
+			span.hamburger-inner
 	#dummy__bg
 	#dummy.dummy
 		ul

@@ -285,5 +285,22 @@ define(['jquery', 'bowser'], function ($, bowser) {
             $('.ul-menu').fadeOut(175);
         }
     });
+
+    var hamburger = $(".hamburger"),
+    toCloseIcon = true,
+    dummy = document.getElementById('dummy'),
+    dummyBg = document.getElementById('dummy__bg');
+    hamburger.on("click", function(e) {
+        if (toCloseIcon) {
+            hamburger.toggleClass("is-active");
+			dummy.className = 'dummy__active';
+            dummyBg.className= 'dummy__bg__active';
+		} else {
+            hamburger.toggleClass("is-active");
+			dummy.className = ('dummy__out');
+            dummyBg.className = ('dummy__bg__out');
+		}
+		toCloseIcon = !toCloseIcon;
+    });
 });
 //# sourceMappingURL=initial.js.map

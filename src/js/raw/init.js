@@ -85,7 +85,7 @@ ga('send', 'pageview');
 		segmentA = new Segment(pathA, beginAC, endAC),
 		segmentB = new Segment(pathB, beginB, endB),
 		segmentC = new Segment(pathC, beginAC, endAC),
-		trigger = document.getElementById('menu-icon-trigger'),
+		trigger = document.getElementById('menu-icon-wrapper'),
 		toCloseIcon = true,
 		dummy = document.getElementById('dummy'),
         dummyBg = document.getElementById('dummy__bg'),
@@ -93,15 +93,17 @@ ga('send', 'pageview');
 	wrapper.style.visibility = 'visible';
 	trigger.onclick = function() {
 		if (toCloseIcon) {
-			inAC(segmentA);
-			inB(segmentB);
-			inAC(segmentC);
+			// inAC(segmentA);
+			// inB(segmentB);
+			// inAC(segmentC);
+			// wrapper.className = 'is-active';
 			dummy.className = 'dummy__active';
             dummyBg.className= 'dummy__bg__active';
 		} else {
-			outAC(segmentA);
-			outB(segmentB);
-			outAC(segmentC);
+			// outAC(segmentA);
+			// outB(segmentB);
+			// outAC(segmentC);
+			// wrapper.classList.remove('is-active');
 			dummy.className = 'dummy__out';
             dummyBg.className = 'dummy__bg__out'
 		}
