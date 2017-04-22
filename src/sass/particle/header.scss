@@ -245,6 +245,18 @@
 			.hero--logo_icon path{
 				fill: darken(palette(golden), 5) !important;
 			}
+            .hamburger-inner {
+                background-color: palette(dark, normal) !important;
+                &::after, &::before {
+                    background-color: palette(dark, normal) !important;
+                }
+                &:hover {
+                    background-color: palette(dark, gray) !important;
+                    &::after, &::before {
+                        background-color: palette(dark, normal) !important;
+                    }
+                }
+            }
         }
         &-inline {
           @media screen and (max-width: $tablet){
