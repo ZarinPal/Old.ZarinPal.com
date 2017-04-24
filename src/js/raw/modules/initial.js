@@ -214,6 +214,17 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 });
             }
         });
+
+        var hamburger = $(".hamburger"),
+            togglaNav = $('.toggleNav');
+        function toggleNav() {
+            hamburger.toggleClass("is-active");
+            togglaNav.toggleClass('nav-is-active');
+        }
+        hamburger.on("click", function(e) {
+            e.preventDefault();
+            toggleNav();
+        });
     });
 
     // $('.arrow-next').click(function() {
@@ -284,17 +295,6 @@ define(['jquery', 'bowser'], function ($, bowser) {
             $('.ul-menu').removeClass('active');
             $('.ul-menu').fadeOut(175);
         }
-    });
-
-    var hamburger = $(".hamburger"),
-        togglaNav = $('.toggleNav');
-    function toggleNav() {
-        hamburger.toggleClass("is-active");
-        togglaNav.toggleClass('nav-is-active');
-    }
-    hamburger.on("click", function(e) {
-        e.preventDefault();
-        toggleNav();
     });
 });
 //# sourceMappingURL=initial.js.map
