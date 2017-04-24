@@ -556,18 +556,9 @@
     height: 100%;
     background: rgba(0,0,0,0.5);
     z-index:1;
-    -webkit-animation-duration: 0.2s;
-    animation-duration: 0.2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
     display: inline-block;
     top:0;
-    right:320px;
-    @media screen and(max-width: 414px){
-      right: 275px;
-    }
+    right: 0;
   }
   &__out{
     -webkit-animation-duration: 0.2s;
@@ -587,6 +578,7 @@
       position: fixed;
       width: 320px;
       height: 100%;
+      z-index: 11;
       background: #fff;
       top:0;
       right:0;

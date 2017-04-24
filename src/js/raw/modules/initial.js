@@ -290,7 +290,7 @@ define(['jquery', 'bowser'], function ($, bowser) {
     toCloseIcon = true,
     dummy = document.getElementById('dummy'),
     dummyBg = document.getElementById('dummy__bg');
-    hamburger.on("click", function(e) {
+    function toggleNav() {
         if (toCloseIcon) {
             hamburger.toggleClass("is-active");
 			dummy.className = 'dummy__active';
@@ -301,6 +301,10 @@ define(['jquery', 'bowser'], function ($, bowser) {
             dummyBg.className = ('dummy__bg__out');
 		}
 		toCloseIcon = !toCloseIcon;
+    }
+    hamburger.on("click", function(e) {
+        e.preventDefault();
+        toggleNav();
     });
 });
 //# sourceMappingURL=initial.js.map
