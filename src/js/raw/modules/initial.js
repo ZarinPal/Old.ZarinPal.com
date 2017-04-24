@@ -215,15 +215,12 @@ define(['jquery', 'bowser'], function ($, bowser) {
             }
         });
 
-        var hamburger = $(".hamburger"),
-            togglaNav = $('.toggleNav');
-        function toggleNav() {
-            hamburger.toggleClass("is-active");
-            togglaNav.toggleClass('nav-is-active');
-        }
-        hamburger.on("click", function(e) {
-            e.preventDefault();
-            toggleNav();
+        var hamburger = $(".hamburger");
+        var togglaNav = $(".toggleNav");
+        $(".hamburger").click(function(e) {
+          hamburger.toggleClass("is-active");
+          togglaNav.toggleClass("nav-is-active");
+          e.preventDefault();
         });
     });
 
