@@ -287,20 +287,10 @@ define(['jquery', 'bowser'], function ($, bowser) {
     });
 
     var hamburger = $(".hamburger"),
-    toCloseIcon = true,
-    dummy = document.getElementById('dummy'),
-    dummyBg = document.getElementById('dummy__bg');
+        togglaNav = $('.toggleNav');
     function toggleNav() {
-        if (toCloseIcon) {
-            hamburger.toggleClass("is-active");
-			dummy.className = 'dummy__active';
-            dummyBg.className= 'dummy__bg__active';
-		} else {
-            hamburger.toggleClass("is-active");
-			dummy.className = ('dummy__out');
-            dummyBg.className = ('dummy__bg__out');
-		}
-		toCloseIcon = !toCloseIcon;
+        hamburger.toggleClass("is-active");
+        togglaNav.toggleClass('nav-is-active');
     }
     hamburger.on("click", function(e) {
         e.preventDefault();
