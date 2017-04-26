@@ -149,10 +149,10 @@
 		box-shadow: 1px 2px 12px rgba(black, .2), bottom-shadow(1), 0 0 1px rgba(black, .1) inset;
 		// transition: 0.2s;
 		// transition-delay: 1s;
-		&.active{
+		// &.active{
 			// display: block;
 			// opacity: 1;
-		}
+		// }
         &:before{
             content: "";
             position: absolute;
@@ -496,6 +496,12 @@
 				}
             }
         }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    .tablet__hidden {
+        display: none;
     }
 }
 
