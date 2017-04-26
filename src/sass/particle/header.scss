@@ -55,13 +55,7 @@
         }
     }
     &_is-green--app {
-        @include gradient-directional(#55E47C, #5A8282, 225deg);
-    }
-    &_is-green--app--is-mobile {
         background-color: darken(#55E47C, 6%);
-        // background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
-        // background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
-        // background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
         background-repeat: repeat-x;
     }
 	&_is-frozen {

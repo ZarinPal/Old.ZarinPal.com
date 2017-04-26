@@ -27,10 +27,6 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 shade();
             }
         }
-        if (browser.mobile) {
-            var appHeader = document.querySelector('.global--header_is-green--app');
-            appHeader.className = 'global--header global--header_is-green--app--is-mobile';
-        }
 
         $(function () {
 
