@@ -43,7 +43,7 @@
             @include gradient-directional($value_start, $value_end, 225deg);
             // @include gradient-multiple($value_start, $value_middle, $value_end);
             // transition: background-image .1s ease-in-out;
-            will-change: background-image;
+            // will-change: background-image;
             @if $name == "golden"{
                 .global--header-nav--transparent{
                     // background: rgba($black, 0.25);
@@ -53,6 +53,9 @@
                 }
             }
         }
+    }
+    &_is-green--app {
+        @include gradient-directional(#55E47C, #5A8282, 225deg);
     }
 	&_is-frozen {
 		// @include gradient-directional(#DCEDC8, lighten(#4BB0E0, 5), -8deg);
