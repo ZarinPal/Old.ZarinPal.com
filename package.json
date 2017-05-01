@@ -25,5 +25,8 @@
     "vue-router": "^2.0.3",
     "vue-style-loader": "^1.0.0",
     "vueify": "^9.3.0"
+  },
+  "dependencies": {
+    "laravel-elixir-browsersync-official": "^1.0.0"
   }
 }
