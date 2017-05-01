@@ -30,11 +30,18 @@ block content
 					.section--content
 						ul.list
 							-for(i=0; i<faq.length; i++)
-								li.list--item(class=(i == 0) ? 'on' : 'off')
-									header.list--item-head
-										i.list--item_icon
-										span.list--item-title #{faq[i].question}
-									p #{faq[i].answer}
+								-if(faq[i].question == 'شرایط رسیدن به سطح طلایی چگونه است؟ ')
+									li.list--item(class=(i == 0) ? 'on' : 'off')
+										header.list--item-head
+											i.list--item_icon
+											span.list--item-title #{faq[i].question}
+										p رسیدن به سطح طلایی اجباری نیست، در سطح نقره‌ای نیز می‌توانید از تمامی امکانات سایت استفاده نمایید، برای رسیدن به سطح طلایی باید قوانین مربوط به زرین‌پال (دریافت از این <a href="https://github.com/SamanSystems/RulesFile/archive/master.zip">لینک</a>) را پرینت گرفته و به دفاتر اسناد رسمی مراجعه کرده و بر روی برگه‌های پرینت شده و یا روی برگه‌ای جداگانه گواهی امضا گرفته و به آدرس پستی زرین‌پال ارسال نمایید، مبلغ ۸.۵۰۰ تومان (هشت هزار و پانصد تومان) بابت افزایش سطح و رسیدن به سطح طلایی از حساب زرین‌پال کاربران کسر می‌گردد.
+								-else
+									li.list--item(class=(i == 0) ? 'on' : 'off')
+										header.list--item-head
+											i.list--item_icon
+											span.list--item-title #{faq[i].question}
+										p #{faq[i].answer}
 
 	include partials/footer
 	
