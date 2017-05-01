@@ -249,6 +249,41 @@ $team-partition: (
 	.people-header {
 		margin-bottom: $base-max-space / 2;
 	}
+	.people-holder--mobile {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+		transition: .34s opacity;
+		will-change: opacity;
+		.person-mobile {
+			position: relative;
+			padding: 1rem;
+			width: 100%;
+			height: 100px;
+			background: #eee;
+			@include border-radius($base-radius);
+			margin: 1rem 0;
+			box-shadow: 0 0 2px rgba(0,0,0, .15);
+			img {
+				float: right;
+				width: 75px;
+				height: 75px;
+				@include border-radius($base-radius);
+			}
+			.person-mobile_title {
+				float: right;
+				margin: .5rem 1rem 0 0;
+				font-weight: 500;
+			}
+			p {
+				position: relative;
+				clear: both;
+				top: -35px;
+				right: 6rem;
+			}
+		}
+	}
 	.people-holder {
 		position: relative;
 		margin: 0 auto;

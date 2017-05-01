@@ -1,6 +1,14 @@
 .hidden{
   display: none;
 }
+@media screen and (max-width: $tablet){
+    .tablet__hidden {
+        display: none;
+    }
+    .tablet__show {
+        display: block;
+    }
+}
 .global--navigation{
     position: relative;
     min-height: 3.5rem;

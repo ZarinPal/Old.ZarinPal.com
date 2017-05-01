@@ -67,10 +67,18 @@ block content
 				h1.primary-step_content_title.type-scale_gamma تیم درجه یک
 				h3.primary-step_content_little.type-scale_zeta دور هم جمع شده‌ایم تا تجربه‌ای باحال و کاربردی برای کاربران آنلاین بسازیم.
 
-			section.people-holder
+			section.people-holder.tablet__hidden
 				-for(i=0; i<team.length; i++)
 					figure._person(data-people-slug=''+team[i].slug+'' data-people-name=''+team[i].name+'' data-people-job=''+team[i].job+'' data-state-position=''+team[i].level+'')
 						img(src="./assets/img/people/"+team[i].slug+".jpg", alt="")
+
+			section.people-holder--mobile.tablet__show
+				-for(i=0; i<team.length; i++)
+					div.person-mobile(data-people-slug=''+team[i].slug+'' data-people-name=''+team[i].name+'' data-people-job=''+team[i].job+'' data-state-position=''+team[i].level+'')
+						img(src="./assets/img/people/"+team[i].slug+".jpg", alt="")
+						.person-mobile_title #{team[i].name}
+						p #{team[i].job}
+
 
 		//- NOTE: Convert value to strong value! with this
 		//- (val + 20) / 2 = x
