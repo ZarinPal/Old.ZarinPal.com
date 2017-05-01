@@ -2,11 +2,22 @@
   display: none;
 }
 @media screen and (max-width: $tablet){
+    .tablet__hidden__link {
+        display: none;
+    }
     .tablet__hidden {
         display: none;
     }
     .tablet__show {
         display: block;
+    }
+}
+@media screen and (min-width: $tablet) {
+    .tablet__hidden {
+        display: block;
+    }
+    .tablet__show {
+        display: none;
     }
 }
 .global--navigation{
