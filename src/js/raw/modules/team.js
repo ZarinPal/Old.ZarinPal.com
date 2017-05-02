@@ -78,11 +78,13 @@ define(['jquery', 'lib/imageloaded', 'jquery.circlepacker'], function ($, images
 		},
 		activeNavbar: function activeNavbar() {
 			var $self = this;
+			var $header = $('.global--header');
 			var stepRun = this.$gallery.offset().top + this.$gallery.height() - 2;
+			var stepRunMobile = $header.offset().top + $header.height() - 2;
 
 			$(window).on('scroll resize', function () {
 				var scrollTop = $(window).scrollTop();
-				if (scrollTop > stepRun) {
+				if (scrollTop > stepRun && scrollTop > stepRunMobile) {
 					$self.$navbar.addClass('is-sticky');
 
 					// For animate items
