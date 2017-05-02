@@ -20,8 +20,8 @@
 	@return if(length($list) >=$index, nth($list, $index), null);
 }
 
-@function context-calc($scale, $base, $value) {
-	@return ($scale/$base)+#{$value};
+@function context-calc($scale, $base) {
+	@return ($scale/$base);
 }
 
 @function exponent($base, $exponent) {

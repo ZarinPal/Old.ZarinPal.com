@@ -169,10 +169,10 @@
 
 @mixin type-scale($scale, $base, $value, $measure:"") {
 	@if $value == rem {
-		font-size: $scale#{px};
-		font-size: context-calc($scale, $base, $value);
+		// font-size: $scale#{px};
+		font-size: context-calc($scale, $base)#{rem};
 	} @else if $value == em {
-		font-size: context-calc($scale, $base, $value);
+		font-size: context-calc($scale, $base)#{em};
 	} @else {
 		font-size: $scale#{px};
 	}
