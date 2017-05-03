@@ -269,7 +269,7 @@ $team-partition: (
 				float: right;
 				width: 75px;
 				height: 75px;
-				@include border-radius($base-radius);
+				@include border-radius(100%);
 			}
 			.person-mobile_title {
 				float: right;
@@ -280,6 +280,9 @@ $team-partition: (
 				position: relative;
 				clear: both;
 				top: -35px;
+				text-align: right;
+				direction: ltr;
+				//float: right;
 				right: 6rem;
 			}
 		}
