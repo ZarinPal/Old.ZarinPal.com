@@ -9,6 +9,7 @@
 - var id = getRandomArbitrary(0, 3);
 -if( index == true || zarincard == true || index_en == true || zarincard_en == true || mobile_android == true || mobile_android_en == true)
 	- zarincard == true || zarincard_en == true ? id = 0 : id = 1
+	- mobile_android == true || mobile_android_en == true ? id = 0 : id = 1
 	- mobile == true ? id = 3 : '';
 	- index_en1 == true ? id = 3 : id = 0
 	- index == true ? id = 3 : '';
@@ -94,8 +95,8 @@
 											a.btn.btn-transparent.large(href="#Hello-ZarinCard") بیشتر بشناسید...
 											//- a.btn.btn-white.large(href="./index.html") دریافت زرین‌کارت
 											//- a.btn.btn-white.large(href="#") دریافت اپلیکیشن
-
-
+				
+				
 
 				-if( zarincard_en == true )
 					figure.global--header__promocases-item
@@ -140,7 +141,7 @@
 											img.data-vector_fullsize(src="/assets/img/svg/zarinpal.svg", alt="")
 				
 				-if( mobile_android == true )
-					section.app-landing
+					figure.global--header__promocases-item.app-landing
 						.row
 							.column__mobile-16.column__tablet-5.column-inline.vertical-align_middle
 								.column_inner

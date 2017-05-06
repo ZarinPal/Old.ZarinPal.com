@@ -7,6 +7,12 @@
 			display: none;
 		}
 	}
+    &.iphone-gradient {
+        transform: translateZ(0);
+        // &::after {
+            
+        // }
+    }
 	&.soft-void{
 		&::after{
 			filter: saturate(.5) opacity(.75);
