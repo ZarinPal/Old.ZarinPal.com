@@ -21,7 +21,7 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 shade();
                 $('.hero--logo .hero--logo_icon').remove();
             }
-            if (browser.webkit && browser.safari == true) {
+            if (browser.webkit && browser.safari == true || browser.iphone == true && browser.chrome) {
                 shade();
             }
             if (browser.msedge) {
