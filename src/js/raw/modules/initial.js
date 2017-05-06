@@ -6,6 +6,7 @@ define(['jquery', 'bowser'], function ($, bowser) {
     $(document).ready(function () {
 
         var browser = $.browser;
+        console.log(browser);
 
         var shade = function shade() {
             return $('.global--header').addClass('shade-gradient');
@@ -20,9 +21,9 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 shade();
                 $('.hero--logo .hero--logo_icon').remove();
             }
-            if (browser.webkit && browser.versionNumber <= 40) {
-                shade();
-            }
+            // if (browser.webkit && browser.versionNumber <= 40) {
+            //     shade();
+            // }
             if (browser.msedge) {
                 shade();
             }
