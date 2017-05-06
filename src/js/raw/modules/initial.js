@@ -21,9 +21,9 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 shade();
                 $('.hero--logo .hero--logo_icon').remove();
             }
-            // if (browser.webkit && browser.versionNumber <= 40) {
-            //     shade();
-            // }
+            if (browser.webkit && browser.safari == true) {
+                shade();
+            }
             if (browser.msedge) {
                 shade();
             }
