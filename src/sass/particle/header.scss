@@ -2,17 +2,17 @@
 	position: relative;
     z-index: 1;
 	&.shade-gradient{
-		&:after{
+		&::after{
 			// background-image: transparent !important;
 			display: none;
 		}
 	}
 	&.soft-void{
-		&:after{
+		&::after{
 			filter: saturate(.5) opacity(.75);
 		}
 	}
-	&:after{
+	&::after{
 		content: '';
 		position: absolute;
 		top: 0;
@@ -54,10 +54,10 @@
             }
         }
     }
-    &_is-green--app {
-        background-color: darken(#55E47C, 6%);
-        background-repeat: repeat-x;
-    }
+    // &_is-green--app {
+    //     @include gradient-directional($value_start, $value_end, 225deg);
+    //     background-repeat: repeat-x;
+    // }
 	&_is-frozen {
 		// @include gradient-directional(#DCEDC8, lighten(#4BB0E0, 5), -8deg);
 		@include gradient-directional(desaturate(#CADEE2, 2), saturate(#6FABBF, 8), -5deg);
