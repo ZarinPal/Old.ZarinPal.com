@@ -4,15 +4,9 @@
 	&.shade-gradient{
 		&::after{
 			// background-image: transparent !important;
-			display: none;
+			display: none !important;
 		}
 	}
-    &.iphone-gradient {
-        transform: translateZ(0);
-        // &::after {
-            
-        // }
-    }
 	&.soft-void{
 		&::after{
 			filter: saturate(.5) opacity(.75);
@@ -29,7 +23,6 @@
 		background-image: url(../img/pixel.png);
 		background-size: 4.25rem;
 		mix-blend-mode: multiply;
-		// mix-blend-mode: color-burn;
 		transition: .655s cubic-bezier(0.25, 0.9, 0.37, 0.74);
 		transform: translate(0, 0);
         filter: saturate(.5);
@@ -60,10 +53,10 @@
             }
         }
     }
-    // &_is-green--app {
-    //     @include gradient-directional($value_start, $value_end, 225deg);
-    //     background-repeat: repeat-x;
-    // }
+    &_is-green--app {
+        @include gradient-directional(#55E47C, #5A8282, 225deg);
+        background-repeat: repeat-x;
+    }
 	&_is-frozen {
 		// @include gradient-directional(#DCEDC8, lighten(#4BB0E0, 5), -8deg);
 		@include gradient-directional(desaturate(#CADEE2, 2), saturate(#6FABBF, 8), -5deg);

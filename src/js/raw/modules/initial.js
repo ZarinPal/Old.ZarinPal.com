@@ -11,6 +11,9 @@ define(['jquery', 'bowser'], function ($, bowser) {
         var shade = function shade() {
             return $('.global--header').addClass('shade-gradient');
         };
+        var iphoneShade = function iphoneShade() {
+            return $('.global--header_is-green--app').addClass('shade-gradient');
+        };
 
         if (browser.msie && browser.versionNumber < 10) {
             var el = document.createElement('a');
@@ -21,8 +24,11 @@ define(['jquery', 'bowser'], function ($, bowser) {
                 shade();
                 $('.hero--logo .hero--logo_icon').remove();
             }
-            if (browser.webkit && browser.safari == true || browser.iphone == true && browser.chrome) {
+            if (browser.webkit && browser.safari == true) {
                 shade();
+            }
+            if (browser.iphone == true) {
+                iphoneShade();
             }
             if (browser.msedge) {
                 shade();
