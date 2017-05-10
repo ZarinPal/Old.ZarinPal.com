@@ -27,7 +27,7 @@ define(['jquery', 'bowser'], function ($, bowser) {
             if (browser.webkit && browser.safari == true) {
                 shade();
             }
-            if (browser.iphone == true) {
+            if (browser.iphone == true || browser.android == true && browser.mobile == true && browser.webkit == true) {
                 iphoneShade();
             }
             if (browser.msedge) {
