@@ -52,11 +52,7 @@ html(lang=(lang == "fa" ? 'fa-IR' : 'en') dir=(lang == "fa" ? 'rtl' : 'ltr') cla
         meta(name="theme-color", content="#ffffff")
         script(src='/assets/js/lib/segment.min.js')
         script(src='/assets/js/lib/ease.min.js')
-        <!-- BEGIN RAYCHAT CODE -->
-        script(type="text/javascript").
-            !function(){function t(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,localStorage.getItem("rayToken")?t.src="https://app.raychat.io/scripts/js/"+o+"?rid="+localStorage.getItem("rayToken")+"&href="+window.location.href:t.src="https://app.raychat.io/scripts/js/"+o;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}var e=document,a=window,o="97e6458f-c963-4009-97db-d009660273eb";"complete"==e.readyState?t():a.attachEvent?a.attachEvent("onload",t):a.addEventListener("load",t,!1)}();
-        <!-- END RAYCHAT CODE -->
-        
+
         link(href=cacheBusted('/assets/css/styles.css') rel="stylesheet" media="all")
         -if(lang == "en")
             link(href=cacheBusted('/assets/css/en.css') rel="stylesheet" media="all")
@@ -70,3 +66,10 @@ html(lang=(lang == "fa" ? 'fa-IR' : 'en') dir=(lang == "fa" ? 'rtl' : 'ltr') cla
             include scripts
 
         block footer
+
+        script.
+            window.intercomSettings = {
+                app_id: "hzqfsbat"
+            };
+        script.
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/hzqfsbat';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
