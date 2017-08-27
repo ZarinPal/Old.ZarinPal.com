@@ -61,6 +61,128 @@ html(lang=(lang == "fa" ? 'fa-IR' : 'en') dir=(lang == "fa" ? 'rtl' : 'ltr') cla
         block header
 
     body(class=(HelloWithEffect == true ? 'hello-effects' : ''))
+        style
+            |.gold-new-panel-header {
+            |    font-family: iransans,Helvetica,Geneva,Verdana,sans-serif;
+            |    background-color: #FDD418;
+            |    direction: rtl;
+            |    height: 60px;
+            |    overflow-y: hidden;
+            |    -webkit-transition: all 0.5s;
+            |    /* Safari */
+            |    transition: all 0.5s;
+            |}
+            |.gold-new-panel-header .note {
+            |    float: right;
+            |}
+            |.gold-new-panel-header .note .close {
+            |    position: absolute;
+            |    display: inline-block;
+            |    opacity: 0;
+            |cursor: pointer;
+            |top: 17px;
+            |    -webkit-transition: all 2s;
+            |/* Safari */
+            |transition: all 2s;
+            |}
+            |.gold-new-panel-header .note .text {
+            |    display: inline-block;
+            |    padding: 14px 10px 10px 10px;
+            |    -webkit-transition: all 0.5s;
+            |/* Safari */
+            |transition: all 0.5s;
+            |-webkit-transition-delay: 0.1s;
+            |/* Safari */
+            |transition-delay: 0.1s;
+            |}
+            |.gold-new-panel-header .link a {
+            |    float: left;
+            |    opacity: 0.6;
+            |background: #fff;
+            |border-radius: 25px;
+            |    margin: 10px;
+            |    padding: 3px 10px;
+            |    -webkit-transition: all 2s;
+            |/* Safari */
+            |transition: all 2s;
+            |}
+            |.gold-new-panel-header .link a .arrow {
+            |    -webkit-transition: all 0.5s;
+            |/* Safari */
+            |transition: all 0.5s;
+            |float: left;
+            |height: 24px;
+            |}
+            |
+            |.gold-new-panel-header:hover {
+            |    background: #FFE164;
+            |    -webkit-transition: all 0.5s;
+            |/* Safari */
+            |transition: all 0.5s;
+            |}
+            |.gold-new-panel-header:hover .close {
+            |    opacity: 1;
+            |-webkit-transition: all 2s;
+            |/* Safari */
+            |transition: all 2s;
+            |-webkit-transition-delay: 0.1s;
+            |/* Safari */
+            |transition-delay: 0.1s;
+            |}
+            |.gold-new-panel-header:hover .text {
+            |    display: inline-block;
+            |    padding: 14px 50px 10px 10px;
+            |    -webkit-transition: all 0.5s;
+            |/* Safari */
+            |transition: all 0.5s;
+            |}
+            |.gold-new-panel-header:hover .link a {
+            |    opacity: 1;
+            |-webkit-transition: all 2s;
+            |/* Safari */
+            |transition: all 2s;
+            |}
+            |.gold-new-panel-header:hover .link a .arrow {
+            |    padding-right: 10px;
+            |    -webkit-transition: all 0.5s;
+            |/* Safari */
+            |transition: all 0.5s;
+            |}
+        div.gold-new-panel-header.row(style="display:none")
+            div.wrap
+                div.note
+                    span.close
+                        svg( fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z")
+                            path(d="M0 0h24v24H0z" fill="none")
+                    span.text نسخه جدید زرین‌پال را امتحان کنید!
+                div.link
+                    a(href="https://next.zarinpal.com/panel/#/panel/home") ورود به نسخه آزمایشی
+                        span.arrow
+                            svg(fill="#000" height="30" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M0 0h24v24H0z" fill="none")
+                                path(d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z")
+
+        script
+            | function is_jquery_here() {
+            |     setTimeout(function () {
+            |         if (window.$) {
+            |             $("dpcument").ready(function () {
+            |                 if (localStorage.getItem("remove_new_panel_alert") === null) {
+            |                     $(".gold-new-panel-header").show();
+            |                 }
+            |                 $(".gold-new-panel-header .close").click(function () {
+            |                     localStorage.setItem("remove_new_panel_alert", true);
+            |                     $(".gold-new-panel-header").hide();
+            |                 });
+            |             });
+            |         } else {
+            |             is_jquery_here();
+            |         }
+            |     }, 100);
+            | }
+            | is_jquery_here();
+
         block content
 
         if(branch != true)
