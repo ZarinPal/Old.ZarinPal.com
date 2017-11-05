@@ -764,6 +764,9 @@ span[class^="star-"]{
 				&.download--store_playstore svg{
 					fill: #FF5722 !important;
 				}
+                &.download--store_sibapp svg{
+                  fill: #492F8C !important;
+                }
 				&.download--store_appstore svg{
 					fill: palette(blue, base) !important;
 				}
@@ -781,6 +784,10 @@ span[class^="star-"]{
 				transition: .275s ease-in-out;
 			}
 		}
+
+        a:last-child {
+          margin-top: 8px;
+        }
 	}
 }
 ////about
